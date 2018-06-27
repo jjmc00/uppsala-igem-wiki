@@ -1,0 +1,661 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+:root{
+    --gray_Uppsala:         #ddd;
+    --dark_gray_Uppsala:    #555;
+    --white_font_Uppsala:   rgba(242, 242, 242, 0.8);
+    --light_green_Uppsala:  rgba(150, 225, 212, 1);
+    --green_Uppsala:        rgba(140, 220, 185, 1);
+    --dark_green_Uppsala:   rgba(85, 150, 100, 1);
+    --green_black_Uppsala:  rgba(45, 100, 65, 1);
+
+}
+
+/* Font for most text */
+@font-face {
+    src: url(https://fonts.googleapis.com/css?family=Crimson+Text);
+    font-family: 'Crimson Text', serif;
+    
+    /*
+    src:
+    
+    url("css/fonts/Harabara.woff") format("woff"),
+    url("css/fonts/Harabara.otf") format("opentype"),
+    url("css/fonts/Harabara.svg#filename") format("svg");
+    */
+}
+
+/* Backup font*/
+@font-face{
+    src: url(https://fonts.googleapis.com/css?family=Raleway:300);
+    font-family: 'Raleway', sans-serif;
+}   
+
+* {
+    font-family: 'Crimson Text', serif; 
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    Default Box-shadow:
+
+    -webkit-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    -moz-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64); 
+
+*/
+
+/*
+
+h4 - Headings for each 
+
+*/
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+    min-height: 100%;
+    z-index: -300;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0px;
+    z-index: -250;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+
+/* The navigation to each section in the page*/
+ul, li {
+    list-style-type: none;
+}
+
+
+
+
+/* Main content         */
+/* -------------------- */
+.division{
+
+}
+
+.main-heading {
+    margin-left: 120px; 
+    margin-top: 50px;
+}
+
+
+.content{
+    position: relative;
+    top: 180px;
+    left: 50px;
+    right: 120px;
+    min-height: 100%;
+    font-weight: 300;
+    line-height: 1.0;
+    z-index: -200;
+}
+
+.content-container {
+    position: absolute;
+    height: 1200px;
+    left: 20px;
+    width: 70%;
+    z-index: -100;
+}
+
+.opening {
+    background-color: green;
+    margin: 10px 50px;
+}
+
+.img-container {
+    position: relative;
+    display: grid;
+    left: 0;
+    border-left: 1px solid var(--gray_Uppsala);
+    border-right: 1px solid var(--gray_Uppsala);
+    padding: 40px;
+    
+    /* Gradient of the background */
+    /* Dont worry about this */
+    background: var(--white_font_Uppsala);
+    background: linear-gradient(90deg, 
+                rgba(242,242,242,.7) 3%, 
+                rgba(247,242,230,.6) 97%);
+    z-index: -2;
+}
+
+.header {
+    position: absolute;
+    top: 25px;
+    left: 60px;
+}
+
+.worm-container {
+    position: relative;
+    margin-top: 65px;
+}
+
+.card {
+    position: relative;
+    left: 10px;
+    width: calc(18% + 50px);
+    margin-bottom: 5px;
+    -webkit-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    -moz-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    cursor: pointer;
+    
+}
+
+
+
+.card-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.card-title, .card_text{
+    margin: 0;
+    padding: 20px;
+    color: var(--white_font_Uppsala);
+}
+
+.card-title {
+    position: relative;
+    margin-top: -25px;
+    font-size: calc(1vw + 12px);
+    color: var(--white_font_Uppsala );
+}
+
+.card-title::before{
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: -25px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: 5px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.card_text {
+    padding-left: 35px;
+    font-size: 2rem;
+}
+
+
+
+/* The banderol for the title for the pictures */
+.card-banner{
+    position: relative;
+    margin-top: 0px;
+}
+
+.card-banner::before{
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 70%;
+    top: -20px;
+    left: -10px;
+    border-bottom: 1px solid var(--dark_green_Uppsala);
+}
+
+.card-banner::after {
+    content: '';
+    position: absolute;
+    height: 29px;
+    width: 70%;
+    top: 23px;
+    left: -10px;
+    border-bottom: 1px solid var(--dark_green_Uppsala);
+    background-color: rgba(242, 242, 242, 0.4);
+}
+
+.card-gray {
+    position: relative;
+    height: ;
+    width: 10px;
+    top: 52;
+    left: -10;
+    border-left: 40px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 30px solid var(--dark_gray_Uppsala);
+    z-index: -10;
+}
+
+
+
+/* Description text for every image */
+/* Description box for every img text*/
+
+.description-section {
+    position: absolute;
+    top: 125px;
+    left: 40%;
+    width: 55%;
+    height: 500px;
+    background-color: var(--green_Uppsala );
+    padding-top: 40px;
+    
+    display: flex;
+    z-index: -2;
+    overflow-x: hidden;
+}
+
+.img-description-text {
+    position: absolute;
+    padding: 25px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    background-color: white;
+    letter-spacing:0.15px;
+    overflow-x: hidden;
+}
+
+
+
+/* Changing color if on the selected image */
+.visiting {
+    position: relative;
+    background-color: rgba(255, 255, 200, 0.8);
+    z-index: 100;  
+}
+
+.not-visiting {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+
+/* reference and footer styling */
+.references {
+    
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+
+
+/* Navigation bar and asides*/
+.where-on-page {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.where-on-page a {
+    visibility: hidden;
+    float: left;
+    display: block;
+    color: #ddd;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.where-on-page a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.where-on-page a.active {
+    text-decoration: underline;
+    color: rgba(150, 225, 212, 1);
+}
+
+
+/*----------------*/
+.navigation-bar {
+    visibility: hidden;
+    position: fixed;
+    display: block;
+    top: 100px;
+    right: 10px;
+    margin: 5px;
+    padding: 10px;
+    width: 8%;
+    background-color: aquamarine;
+    border: 1px solid black; 
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<header class="main-heading">
+    <h1>Uppsala iGEM 2018</h1>
+</header>
+
+   <!-- Navigation bar for the site -->
+    <div class="navigation-bar">
+        <ul>
+            <li><a href="#Overview">    Overview</a></li>
+            <li><a href="#Team">        Team</a></li>
+            <li><a href="#Project">     Project</a></li>
+            <li><a href="#Modelling">   Modelling</a></li>
+            <li><a href="#Human-P">     Human Practice</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="content">
+        <div class="content-container">
+ 
+            <div class="opening">
+                <div>
+                    <h6>
+                    Nematode parasites cost the agricultural industry lots of money and grief each year due to the many consequences they cause. Among many we can find severe health issues and resistance development in the most commonly occurring family of strongyles. There are currently no easy methods for the diagnosis of these parasites. By reprogramming a smart bacteria to detect and report the presence of the parasites, we aim to develop a simple diagnostic method. This will provide the tools necessary to help farmers both to make decisions on whether to treat their animals and prevent infection. 
+                    </h6>
+                </div>
+            </div>
+ 
+            <div class="img-container">
+            <div class="header">
+                <header>
+                    <h1>Worms Solution</h1>
+                </header>
+            </div>
+            
+                <div class="worm-container">
+                    <div class="card" id="card1">
+                    <img src="//unsplash.it/700/701" alt="asdasd" class="card-img">
+
+                            <div class="card-banner" style="visibility: hidden;"></div>
+                            <div class="card-gray" style="visibility: hidden;"></div>
+                            <div class="card_pointer" style="visibility: hidden;"></div>
+                            <h4 class="card-title"> Title1 </h4>
+                            <p class="card_text"> Sample text </p>
+
+                    </div>
+                    <div class="card" id="card2" style="background-color: rgba(220, 220, 220, 0.4);">
+                    <img src="//unsplash.it/702/701" alt="" class="card-img">
+
+                            <div class="card-banner" style="visibility: hidden;"></div>
+                            <div class="card-gray" style="visibility: hidden;"></div>
+                            <div class="card_pointer" style="visibility: hidden;"></div>
+                            <h4 class="card-title"> Title2 </h4>
+                            <p class="card_text"> Sample text </p>
+
+                    </div>
+                    <div class="card" id="card3">
+                    <img src="//unsplash.it/708/787" alt="" class="card-img">
+
+                            <div class="card-banner" style="visibility: hidden;"></div>
+                            <div class="card-gray" style="visibility: hidden;"></div>
+                            <div class="card_pointer" style="visibility: hidden;"></div>
+                            <h4 class="card-title"> Title3 </h4>
+                            <p class="card_text"> Sample text </p>
+
+                    </div>
+                    <div class="card" id="card4">
+                    <img src="//unsplash.it/701/701" alt="" class="card-img">
+
+                            <div class="card-banner" style="visibility: hidden"></div>
+                            <div class="card-gray" style="visibility: hidden;"></div>
+                            <div class="card_pointer" style="visibility: hidden;"></div>
+                            <h4 class="card-title"> Title4 </h4>
+                            <p class="card_text"> Sample text </p>
+
+                    </div>
+                </div>
+
+                <div class="description">
+                    <div class="description-section">
+                        
+                        <div class="img-description-text" id="img-desc-0">
+                        <h4></h4>
+                        <br>
+                        <br>
+                        <p>
+                        <span><br><br></span>
+                        <span><br><br></span> </p>
+                        </div>
+
+                        <div class="img-description-text" id="img-desc-1" style="display: none">
+                        <h4>Example1</h4>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. In rutrum. In dapibus augue non sapien. Etiam neque. Nunc tincidunt ante vitae massa. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Mauris tincidunt sem sed arcu. Nullam rhoncus aliquam metus. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Etiam posuere lacus quis dolor. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. Curabitur sagittis hendrerit ante. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+
+                        <span><br><br></span>
+
+                        Quisque porta. Etiam dictum tincidunt diam. Etiam posuere lacus quis dolor. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Proin in tellus sit amet nibh dignissim sagittis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aenean fermentum risus id tortor. Cras elementum. Nullam eget nisl. Etiam dictum tincidunt diam. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nullam faucibus mi quis velit. Donec quis nibh at felis congue commodo. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam posuere lacus quis dolor. Pellentesque sapien. Integer tempor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Aliquam erat volutpat.
+                        <span><br><br></span> </p>
+                        </div>
+
+                        <div class="img-description-text" id="img-desc-2" style="display: none;">
+                        <h4>Example2</h4>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. In rutrum. In dapibus augue non sapien. Etiam neque. Nunc tincidunt ante vitae massa. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Mauris tincidunt sem sed arcu. Nullam rhoncus aliquam metus. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Etiam posuere lacus quis dolor. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. Curabitur sagittis hendrerit ante. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+
+                        <span><br><br></span>
+
+                        Quisque porta. Etiam dictum tincidunt diam. Etiam posuere lacus quis dolor. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Proin in tellus sit amet nibh dignissim sagittis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aenean fermentum risus id tortor. Cras elementum. Nullam eget nisl. Etiam dictum tincidunt diam. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nullam faucibus mi quis velit. Donec quis nibh at felis congue commodo. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam posuere lacus quis dolor. Pellentesque sapien. Integer tempor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Aliquam erat volutpat.
+                        <span><br><br></span> </p>
+                        </div>
+
+                        <div class="img-description-text" id="img-desc-3" style="display: none;">
+                        <h4>Example3</h4>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. In rutrum. In dapibus augue non sapien. Etiam neque. Nunc tincidunt ante vitae massa. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Mauris tincidunt sem sed arcu. Nullam rhoncus aliquam metus. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Etiam posuere lacus quis dolor. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. Curabitur sagittis hendrerit ante. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+
+                        <span><br><br></span>
+
+                        Quisque porta. Etiam dictum tincidunt diam. Etiam posuere lacus quis dolor. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Proin in tellus sit amet nibh dignissim sagittis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aenean fermentum risus id tortor. Cras elementum. Nullam eget nisl. Etiam dictum tincidunt diam. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nullam faucibus mi quis velit. Donec quis nibh at felis congue commodo. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam posuere lacus quis dolor. Pellentesque sapien. Integer tempor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Aliquam erat volutpat.
+                        <span><br><br></span> </p>
+                        </div>
+
+                        <div class="img-description-text" id="img-desc-4" style="display: none;">
+                        <h4>Example4</h4>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. In rutrum. In dapibus augue non sapien. Etiam neque. Nunc tincidunt ante vitae massa. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Mauris tincidunt sem sed arcu. Nullam rhoncus aliquam metus. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Etiam posuere lacus quis dolor. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. Curabitur sagittis hendrerit ante. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.
+
+                        <span><br><br></span>
+
+                        Quisque porta. Etiam dictum tincidunt diam. Etiam posuere lacus quis dolor. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Proin in tellus sit amet nibh dignissim sagittis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aenean fermentum risus id tortor. Cras elementum. Nullam eget nisl. Etiam dictum tincidunt diam. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nullam faucibus mi quis velit. Donec quis nibh at felis congue commodo. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam posuere lacus quis dolor. Pellentesque sapien. Integer tempor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Aliquam erat volutpat.
+                        <span><br><br></span> </p>
+                        </div>
+
+                        <div class="pointer"></div>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="references" style="position: relative">
+            <p> some reference [1] - 2018</p<br>
+            <p> some reference [1] - 2018</p<br> 
+            <p> some reference [1] - 2018</p<br> 
+            <p> some reference [1] - 2018</p<br> 
+            <p> some reference [1] - 2018</p<br> 
+            <p> some reference [1] - 2018</p<br> 
+            <p> some reference [1] - 2018</p<br> 
+        </div>
+    
+        <div class="footer">
+            <p>Our sponsors</p><br>
+            <p>contact</p><br>
+            <p>buy us a coffee</p><br>
+            </div>
+    </div>
+    <div style="position: relative"></div>
+
+</div>
+
+
+<div class="where-on-page">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<!-- Requires jQuery -->
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="jquery-3.2.1.min.js" type="type="text/javascript""></script>
+<script>
+$(function() {
+    
+   // Change Color
+   // .card:nth-child(1) {
+   // background-color: rgba(200, 210, 184, 0.3);
+    //$(".card").children().css('background-color', '#ffffff').css({ opacity: 0.5 });
+    
+    
+    
+    
+    
+    //---------------------------------------------------------------
+    // Function for showing and hiding element by pressing a button...
+    // In a function, to reduce repeted code!
+    // Ex: does:
+    //              $('#card1').find('.card-banner').css('visibility', 'visible');
+    //              $('#card1').find('.card-banner').css('visibility', 'visible');
+
+    
+    var query1 = $('div#img-desc-1'); 
+    var query2 = $('div#img-desc-2'); 
+    var query3 = $('div#img-desc-3'); 
+    var query4 = $('div#img-desc-4'); 
+    
+    var isVisQuery1 = query1.is(':visible');
+    var isVisQuery2 = query2.is(':visible');
+    var isVisQuery3 = query3.is(':visible');
+    var isVisQuery4 = query4.is(':visible');
+    
+   
+   //alert(isVisQuery2);
+   /*
+   var lastVisited = function lastVisitedLink(lastVisited) {
+        if ((lastVisited.is(':hidden')) === !isVisQuery1){
+            lastVisited = query1;
+            return lastVisited;
+            alert('query1');
+        } 
+        else if ((lastVisited.is(':hidden')) === !isVisQuery2){
+            lastVisited = query2;
+            return lastVisited;
+            alert('query2');
+        } 
+        else if ((lastVisited.is(':hidden')) === !isVisQuery3){
+            lastVisited = query3;
+            return lastVisited;
+            alert('query3');
+        }
+        else {
+            lastVisited = query4;
+            return lastVisited;
+            alert('query4');
+        }   
+    };
+   */
+   
+   query1.show();
+    
+    
+    $('#card1').click(function(){
+    
+        if (isVisQuery1 === false){
+                query1.show('slow');
+                query2.hide('slow');
+                query3.hide('slow');
+                query4.hide('slow');
+        }   
+    });
+    
+    
+    
+    $('#card2').click(function(){
+    
+        if (isVisQuery2 === false){
+                query2.show('slow');
+                query1.hide('slow');
+                query3.hide('slow');
+                query4.hide('slow');
+        }
+    });
+    
+    
+    $('#card3').click(function(){
+    
+        if (isVisQuery3 === false){
+                query3.show('slow');
+                query1.hide('slow');
+                query2.hide('slow');
+                query4.hide('slow');
+        }
+    });
+    
+    
+    $('#card4').click(function(){
+    
+        if (isVisQuery4 === false){
+                query4.show('slow');
+                query1.hide('slow');
+                query2.hide('slow');
+                query3.hide('slow');
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
