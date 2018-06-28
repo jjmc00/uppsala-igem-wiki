@@ -1,0 +1,2013 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Where you must store your colors */
+:root{
+    --gray_Uppsala:         #ddd;
+    --dark_gray_Uppsala:    #555;
+    --white_font_Uppsala:   rgba(242, 242, 242, 0.8);
+    --light_green_Uppsala:  rgba(150, 225, 212, 1);
+    --green_Uppsala:        rgba(140, 220, 185, 1);
+    --green_o_Uppsala:      rgba(140, 220, 185, 0.5);
+    --dark_green_Uppsala:   rgba(85, 150, 100, 1);
+    --green_black_Uppsala:  rgba(45, 100, 65, 1);
+    --oxford_color:         #005c75;
+    --e-lab_color:          #08a1a1;
+
+}
+
+/* Font for most text */
+@font-face {
+    src: url(https://fonts.googleapis.com/css?family=Crimson+Text);
+    font-family: 'Crimson Text', serif;
+    
+    /*
+    src:
+    
+    url("css/fonts/Harabara.woff") format("woff"),
+    url("css/fonts/Harabara.otf") format("opentype"),
+    url("css/fonts/Harabara.svg#filename") format("svg");
+    */
+}
+
+/* Backup font*/
+@font-face{
+    src: url(https://fonts.googleapis.com/css?family=Raleway:300);
+    font-family: 'Raleway', sans-serif;
+}   
+
+* {
+    font-family: 'Crimson Text', serif; 
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    Default Box-shadow:
+
+    -webkit-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    -moz-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64); 
+
+*/
+
+/*
+
+h1 - Main heading for new sections 
+h2 - sub-headings
+h4 - Headings for each description
+
+
+*/
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+    min-height: 100%;
+    z-index: -300;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0px;
+    background: #fff;
+    background: linear-gradient(90deg, 
+                rgba(240,247,251, 1) 3%, 
+                rgba(248,252,250, 1) 97%);
+    z-index: -250;
+}
+
+h1 {
+    font-size: 3.2vw;
+}
+
+h2 {
+    padding-top: 0.5vw;
+    font-size: 1.4vw;
+}
+
+h4 {
+    margin: 1.5vw 0;
+    font-size: 2.0vw;
+}
+
+h6 {
+    
+}
+
+
+/* The navigation to each section in the page*/
+ul, li {
+    list-style-type: none;
+}
+
+
+
+
+/* Main content         */
+/* -------------------- */
+.division{
+
+}
+
+.main-heading {
+    margin-top: 50px;
+}
+
+.card-style {
+    position: relative;
+    left: 0;
+    margin-top: 25px;
+    padding: 50px 5vw;
+    
+    border-left: 1px solid var(--gray_Uppsala);
+    border-right: 1px solid var(--gray_Uppsala);
+    
+    /* Gradient of the background */
+    /* Dont worry about this */
+    background: var(--white_font_Uppsala);
+    background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 1) 3%, 
+                rgba(255, 255, 255, 1) 97%);
+    z-index: -2;
+}
+
+.header {
+    position: relative;
+    margin-top: 2.5vw;
+    left:0
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    /*left: calc(5% + 24px);*/
+}
+
+.content{
+    position: relative;
+    top: 180px;
+    height: 100%;
+  
+    min-height: 100%;
+    font-weight: 300;
+    line-height: 1.0;
+    z-index: -200;
+}
+
+.content-container {
+    position: relative;
+    height: 1200px;
+    left: 8%;
+    height: 12000px;
+    width: 75%;
+    z-index: -100;
+}
+
+.opening {
+    background-color: green;
+    margin: 80px 50px;
+}
+
+.img-container {
+    position: relative;
+    left: 0;
+    margin-top: 25px;
+    padding-top: 50px;
+    
+    border-left: 1px solid var(--gray_Uppsala);
+    border-right: 1px solid var(--gray_Uppsala);
+    
+    /* Gradient of the background */
+    /* Dont worry about this */
+    background: var(--white_font_Uppsala);
+    background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 1) 3%, 
+                rgba(255, 255, 255, 1) 97%);
+    z-index: -2;
+}
+
+.cards {
+    position: relative;
+    left: 10px;
+    width: calc(18% + 50px);
+    height: 100px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    -moz-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+.img-desc-text {
+    position: absolute;
+    display: inline;
+    padding: 0px;
+    width: 50%;
+    top: 120px;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    letter-spacing:0.2px;
+    text-align: justify;
+    overflow-x: hidden;
+}
+
+.cards-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* The banderol for the title for the pictures */
+.cards-banner{
+    position: relative;
+    margin-top: 0px;
+}
+
+.cards-banner::before{
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 70%;
+    top: -20px;
+    left: -10px;
+    border-bottom: 1px solid var(--dark_green_Uppsala);
+}
+
+.cards-banner::after {
+    content: '';
+    position: absolute;
+    height: 29px;
+    width: 70%;
+    top: 23px;
+    left: -10px;
+    border-bottom: 1px solid var(--dark_green_Uppsala);
+    background-color: rgba(242, 242, 242, 0.4);
+}
+
+.cards-gray {
+    position: relative;
+    height: ;
+    width: 10px;
+    top: 52;
+    left: -10;
+    border-left: 40px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 30px solid var(--dark_gray_Uppsala);
+    z-index: -10;
+}
+
+/* Line to signify end of sections*/
+.img-desc-text::before {
+    /* Essential for pseudo element to work. */
+    content: "";
+    /* Puts pseudo element on own line. */
+    position: absolute;
+    /* Center border. */
+    top: 30px;
+    margin-left: -20px;
+    /* width of border */
+    height: 15px; 
+    /* space between element & border. */
+    padding-left: 10px;
+    /* the border */
+    border-left: 1px solid #ddd; 
+}
+
+/* Line to signify end of sections*/
+.img-desc-text::after {
+    /* Essential for pseudo element to work. */
+    content: "";
+    /* Puts pseudo element on own line. */
+    display: block;
+    /* Center border. */
+    margin: 0px auto; 
+    /* width of border */
+    width: 50%; 
+    /* space between element & border. */
+    padding-top: 20px; 
+    /* the border */
+    border-bottom: 1px solid #555; 
+}
+
+
+
+
+
+
+/* Small worm */
+.tester-con {
+    position: relative;
+    
+    top: 16.5vw;
+    left: calc(36vw - 20px);
+    height: 500px;
+}
+
+.small-worm-col-1 {
+    display: block;
+    float: left;
+    margin: 0;
+}
+
+.small-worm-col-2 {
+    float: left;
+    display: block;
+}
+
+#cards1, 
+#cards2,
+#cards3,
+#cards4 {
+    width: calc(14vw + 10px);
+}
+
+
+.small.img-desc-text {
+    top: 16.5vw;
+    width: 45%;
+    left: 5%;
+}
+
+.sw-title {
+    margin: 0;
+    margin-top: -10px;
+    padding: 20px;
+    color: var(--white_font_Uppsala);
+    position: relative;
+
+    font-size: calc(1vw + 12px);
+    color: var(--white_font_Uppsala );
+}
+
+.sw-title::before{
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: -25px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.sw-title::after {
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: 5px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.statistics-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0px 2px;
+    text-align: justify;
+    background-color: var(--green_o_Uppsala);
+}
+
+.statistics-box p { 
+    padding: 10px;
+    padding-top: 5px;
+}
+
+
+
+
+
+/* Large worm */
+.large-worm-container {
+    position: relative;
+    margin-top: 12vw;
+}
+
+.lw-title {
+    margin: 0;
+    margin-top: -40px;
+    padding: 20px;
+    color: var(--white_font_Uppsala);
+    position: relative;
+
+    font-size: calc(1vw + 12px);
+    color: var(--white_font_Uppsala );
+}
+
+.lw-title::before{
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: -25px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.lw-title::after {
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 45%;
+    top: 5px;
+    left: 5px;
+    border-bottom: 1px solid var(--light_green_Uppsala);
+}
+
+.large.img-desc-text {
+    top: 20vw;
+    width: 45%;
+    left: 44%;
+}
+
+
+
+
+
+/* Changing color if on the selected image */
+.visiting {
+    position: relative;
+    background-color: rgba(255, 255, 200, 0.8);
+    z-index: 100;  
+}
+
+.not-visiting {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+
+
+
+/* Target the class worm buster and also adds the class 'card-style' */
+/* All changes will only effect the class 'worm-buster' */
+/* <div class="worm-buster card-style"></div> */
+.worm-buster.card-style {
+    
+}
+
+.wb-bacteria-container {
+    
+}
+
+.wb-compare-bacteria {
+    position: relative;
+    width: 80%;
+    display: block;
+}
+
+.wb-bacteria-img {
+    position: absolute;
+}
+
+#bacteria-img1 {
+left:0;
+width: 50%;
+display: inline-grid;
+}
+
+#bacteria-img2 {
+    right:0;
+width: 50%;
+display: inline-grid;
+}
+
+.bacteria-img {
+
+}
+
+.wb-section-1 {
+
+}
+
+.wb-section-1-img {
+
+}
+
+.wb-section-2 {
+
+}
+
+.wb-section-2-img {
+
+}
+
+.wb-section-3 {
+
+}
+
+.wb-section-3-img {
+
+}
+
+.wb-section-4 {
+
+}
+
+.wb-section-4-img {
+
+}
+
+.wb-section-5 {
+
+}
+
+
+
+
+
+
+.floating_boxes {
+    /* Default Box-shadow: */
+
+    -webkit-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    -moz-box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64);
+    box-shadow: 9px 8px 30px -5px rgba(161,152,161,0.64); 
+
+}
+
+.floating_boxes.card-style {
+    
+}
+
+.global-worming.card-style {
+    
+}
+
+
+
+
+.or-container { 
+
+}
+                
+.or-media {
+                    
+}
+
+.or-education {
+
+}
+
+.or-discussion {
+
+}
+
+.or-booklet {
+
+}
+                
+                    
+
+
+
+.sponsoring.card-style {
+    
+}
+
+/* reference and footer styling */
+.references.card-style {
+
+}
+
+.sponsors {
+
+}
+
+.acknowledgements.card-style {
+    
+}
+
+
+
+.footer {
+
+    margin-top: 50px;
+    border: 1px solid red;
+    /*
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #ccc;
+    text-align: center;
+    */
+}
+
+
+
+
+/* Navigation bar and asides*/
+.where-on-page {
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.where-on-page a {
+    visibility: hidden;
+    float: left;
+    display: block;
+    color: #ddd;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.where-on-page a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.where-on-page a.active {
+    text-decoration: underline;
+    color: rgba(150, 225, 212, 1);
+}
+
+
+/*----------------*/
+.navigation-bar {
+    visibility: hidden;
+    position: fixed;
+    display: block;
+    top: 100px;
+    right: 10px;
+    margin: 5px;
+    padding: 10px;
+    width: 8%;
+    background-color: aquamarine;
+    border: 1px solid black; 
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<header class="main-heading">
+    <h1>Uppsala iGEM 2018 - typography css</h1>
+</header>
+
+   <!-- Navigation bar for the site -->
+    <div class="navigation-bar">
+        <ul>
+            <li><a href="#Overview">    Overview</a></li>
+            <li><a href="#Team">        Team</a></li>
+            <li><a href="#Project">     Project</a></li>
+            <li><a href="#Modelling">   Modelling</a></li>
+            <li><a href="#Human-P">     Human Practice</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="content">
+        <div class="content-container">
+ 
+ 
+            <!-- Classes: 'opening', 'heading' -->
+            <!-- Opening sentance               -->
+            <div class="opening">
+                <div>
+                    <h2>
+                    Nematode parasites cost the agricultural industry lots of money and grief each year due to the many consequences they cause. Among many we can find severe health issues and resistance development in the most commonly occurring family of strongyles. There are currently no easy methods for the diagnosis of these parasites. By reprogramming a smart bacteria to detect and report the presence of the parasites, we aim to develop a simple diagnostic method. This will provide the tools necessary to help farmers both to make decisions on whether to treat their animals and prevent infection. 
+                    </h2>
+                </div>
+            </div>
+ 
+ 
+            <!-- Classes: 'img-container', 'cards', 'cards-#' -->      
+            <!-- Small worms                    -->
+            <div class="img-container card-style" id="img-small">
+            <div class="header">
+                    <h1 class="small-worm-h1"> Small Strongyles </h1>
+                    <h2 class="small-worm-h2"> Cyathostominae </h2>
+            </div>
+            
+                <!--<div class="small-worm-container"> -->
+                <div class="tester-con">
+                    
+                    <div>
+                    <div class="small-worm-col-1">
+                        
+                        <div class="cards" id="cards1">
+                        <img src="http://unsplash.it/700/701" alt="asdasd" class="cards-img">
+                                <h4 class="sw-title"> Title1 </h4>
+                        </div>
+                        <div class="cards" id="cards4">
+                        <img src="http://unsplash.it/701/701" alt="" class="cards-img">
+                                <h4 class="sw-title"> Title4 </h4>
+                        </div>                        
+                        
+                    </div>
+                    <div class="small-worm-col-2">
+                        <div class="cards" id="cards2" style="background-color: rgba(220, 220, 220, 0.4);">
+                        <img src="http://unsplash.it/702/701" alt="" class="cards-img">
+                                <h4 class="sw-title"> Title2 </h4>
+                        </div>
+                        <div class="cards" id="cards3">
+                        <img src="http://unsplash.it/708/787" alt="" class="cards-img">
+                                <h4 class="sw-title"> Title3 </h4>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+
+                <!-- ------------------------->
+                <!-- Small worms - Description -->
+                <div class="description" id="description-small">
+                    <div class="description-section">
+                        
+                        <div class="small img-desc-text" id="img-desc-0">
+                        <h4></h4>
+                        <br>
+                        <br>
+                        <p>
+                        <span><br><br></span>
+                        <span><br><br></span> </p>
+                        </div>
+                        
+                        
+                        <!-- DESCRIPTION SMALL WORM 1 -->
+                        <div class="small img-desc-text" id="img-desc-1" style="display: none">
+                        <h4> Small Strongyles</h4>
+                        <br>
+                        <br>
+                        <p>
+                            Small Strongyles or Cyathostominae are among the most common equine parasites, with more than 52 species in their family [2]. The infectious stage of small strongyles is when they’ve developed into larvae while still lurking in the grass. While horses graze, they consume the worms and the small strongyles continue to develop in the horses’ intestines, forming cysts in the intestinal wall [1]. When further evolved, these small strongyles can burst out from their cysts during late winter or early spring, moving up towards the intestinal lumen where they become adult worms [1, 9]. In addition, due to studies which has shown that treatments with deworming drugs can trigger the encysted larva in the intestines to re-emerge, small strongyle has gotten increased attention within the field [1].
+                        </p><br>
+                        
+                        <div class="statistics-box">
+                        <p> <strong>  Statistics Box: </strong> </p>    
+                        <p>
+                            In 461 horses in Sweden, an overall of 53,7 % of all horses was discovered to be infected [1]. 
+                            In the period July to September the prevalence was estimated to 78,4% in the horse population, indicating seasons affect the infection rate [1]. 
+                            Similar trends are seen in Europe and North America showing reported cases with 100% of horses showing small strongyle infections [2].
+                        </p>
+                        </div>
+                        
+                        </div>
+
+
+                        <!-- DESCRIPTION SMALL WORM 2 -->
+                        <div class="small img-desc-text" id="img-desc-2" style="display: none;">
+                        <h4> Symptoms </h4>
+                        <br>
+                        <br>
+                        <p>
+                            The release of larvae from cysts can lead to lesions, diarrhea, and potential weight loss. This condition is called cyathostominosis [1]. When untreated, the death tolI can reach number up to 50%. During the seasonal rupture of cysts,  millions of larvae can be released at the same time, which can result in severe and life-threatening consequences [6]. The infection of small strongyles is not one of presence, but one of quantity. They are not dangerous in small amounts and therefore it is difficult to tell whether a horse needs to be treated or not [10]. 
+                        </p><br>
+                        
+                        <p>
+                            By providing a better diagnostic tool, farmers will be able to know when to treat the horse in the purpose of avoiding mass rupture and severe consequences.
+                        </p>
+                        </div>
+                        
+                        
+                        <!-- DESCRIPTION SMALL WORM 3 -->
+                        <div class="small img-desc-text" id="img-desc-3" style="display: none;">
+                        <h4> Methods of Detection</h4>
+                        <br>
+                        <br>
+                        <p>
+                            Currently the only method for detection and counting of how many worms there are in an animal is counting nematode eggs in fecal samples. This method is not reliable and also requires farmers and ranchers to send in fecal samples to a lab with trained personnel [4]. This technique is expensive, inconsistent, and requires timely shipping of samples. Currently many horse owners are reluctant to conduct the testing and treat their horses regardless of need, contributing to the problem of resistance [10]. 
+                        </p>    
+                        </div>
+
+
+                        <!-- DESCRIPTION SMALL WORM 4 -->
+                        <div class="small img-desc-text" id="img-desc-4" style="display: none;">
+                        <h4> Resistance development </h4>
+                        <br>
+                        <br>
+                        <p>
+                            Unfortunately, the extensive overuse of deworming drugs has now lead to the detection of worms that are resistant to the most commonly used drugs [2,5]. Since no new deworming drugs have been approved for use in horses the whole equine industry relies on macrocyclic lactones, currently the most common type of deworming drugs used. Unfortunately, cases of resistance among nematode adults have been spotted for macrocyclic lactones as well. So far, four studies with similar results spanning from Europe to North America have been published with concrete data, linking certain small strongyle species to reduced time until detection of eggs after deworming treatment, showing an increase in resistance[2]. 
+                        </p><br>
+                        <p>
+                            Moxidectin is a very common drug used. It is both hazardous for the environment and is also losing its effectiveness towards worm populations [15,16]. 
+                        </p><br>    
+                        <p>
+                            Due to all of these facts, we aim to develop a diagnostic tool to give horse owners a better estimation of the amount of worms in the horse. This would allow them to adapt the deworming treatment based on the level of infection.
+                        </p>
+                        </div>
+
+                        <div class="pointer"></div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+            <!-- Classes: 'img-container', 'cards', 'cards-#' -->
+            <!-- Large worms                    -->
+           <div class="img-container card-style" id="img-large">
+            <div class="header">
+                    <h1 class="large-worm-h1"> Large Strongyles </h1>
+                    <h2 class="large-worm-h2"> Strongylus Vulgaris </h2>
+            </div>
+            
+                <div class="large-worm-container">
+                    <div class="cards" id="cards5">
+                    <img src="http://unsplash.it/700/701" alt="asdasd" class="cards-img">
+
+                            <div class="cards-banner" style="visibility: hidden;"></div>
+                            <div class="cards-gray" style="visibility: hidden;"></div>
+                            <div class="cards_pointer" style="visibility: hidden;"></div>
+                            <h4 class="lw-title"> Title1 </h4>
+
+                    </div>
+                    <div class="cards" id="cards6" style="background-color: rgba(220, 220, 220, 0.4);">
+                    <img src="http://unsplash.it/702/701" alt="" class="cards-img">
+
+                            <div class="cards-banner" style="visibility: hidden;"></div>
+                            <div class="cards-gray" style="visibility: hidden;"></div>
+                            <div class="cards_pointer" style="visibility: hidden;"></div>
+                            <h4 class="lw-title"> Title2 </h4>
+
+                    </div>
+                    <div class="cards" id="cards7">
+                    <img src="http://unsplash.it/708/787" alt="" class="cards-img">
+
+                            <div class="cards-banner" style="visibility: hidden;"></div>
+                            <div class="cards-gray" style="visibility: hidden;"></div>
+                            <div class="cards_pointer" style="visibility: hidden;"></div>
+                            <h4 class="lw-title"> Title3 </h4>
+
+                    </div>
+                    <div class="cards" id="cards8">
+                    <img src="http://unsplash.it/701/701" alt="" class="cards-img">
+
+                            <div class="cards-banner" style="visibility: hidden"></div>
+                            <div class="cards-gray" style="visibility: hidden;"></div>
+                            <div class="cards_pointer" style="visibility: hidden;"></div>
+                            <h4 class="lw-title"> Title4 </h4>
+
+                    </div>
+                </div>
+
+                <div class="description" id="description-large">
+                    <div class="description-section">
+                        
+                        <div class="large img-desc-text" id="img-desc-10">
+                        <h4></h4>
+                        <br>
+                        <br>
+                        <p>
+                        <span><br><br></span>
+                        <span><br><br></span> </p>
+                        </div>
+                        
+                        
+                        <!-- DESCRIPTION SMALL WORM 1 -->
+                        <div class="large img-desc-text" id="img-desc-5" style="display: none">
+                        <h4> Large Strongyles </h4>
+                        <br>
+                        <br>
+                        <p>
+                            The small strongyles larger cousin, Strongylus Vulgaris, is the most pathogenic parasite in horses, posing a significant threat[1]. They, like small strongyles, live in the grass and and infect the horse after being ingested[4]. During the different larval stages inside the horse, the parasite enters the intestinal blood vessels as a part of their life cycle[4,11]. Because of this, they generally can’t be targeted by deworming drugs or detection methods and can cause major problems for domestic animals[8]. The large strongyle therefore needs to be detected in pasture in order to prevent infection.                             
+                        </p>
+                        </div>
+
+
+                        <!-- DESCRIPTION SMALL WORM 2 -->
+                        <div class="large img-desc-text" id="img-desc-6" style="display: none;">
+                        <h4> Symptoms </h4>
+                        <br>
+                        <br>
+                        <p>
+                            When the worms migrate in the arteries they cause inflammation in the arterial wall and induce the formation of blood clots. When a small blood clot forms, it may form an embolism, which can detach and travel in the bloodstream until it reaches and blocks smaller blood vessels. This prevents oxygen and nutrient supply to surrounding tissues and may result in colic[14]. This can cause problems in the animals, with the worst case scenario being death[4]. 
+                        </p><br>
+                        <p>
+                            Having these parasites is obviously a huge problem and there is great need for methods that can detect the parasites before ingestion hence preventing infection
+                            
+                        </p>
+                        </div>
+                        
+                        
+                        <!-- DESCRIPTION SMALL WORM 3 -->
+                        <div class="large img-desc-text" id="img-desc-7" style="display: none;">
+                        <h4> Methods for Detection </h4>
+                        <br>
+                        <br>
+                        <p>
+                            To be able to count either small or large strongyles, differentiation by studying them at a certain stage in the development is necessary. Eggs in feces are incubated for 10 days to let the parasite reach the right state. Afterwards the large or small strongyles can be successfully counted. Unfortunately this method only works for adult strongyles that have laid eggs. What is worth noting is that this technique only makes it possible to detect strongyles after the infection which obviously is a disadvantage, especially in the case for the large strongyle.
+                        </p><br>
+                        <p>
+                            An alternative to this is to use ELISA, which could be used in the bloodstream, and PCR based methods, although the ELISA method need to be carried out in specialised laboratory settings and are not commercially available. Regarding PCR and ELISA they tend to become very expensive [12, 13, 17].
+                        </p><br>
+                        <p>
+                            What is currently needed is a simple detection method, which can be used on spot by the farmer without the need to send samples to specialised labs as is the case with the above mentioned methods. Therefore we aim to develop a detection method that can be applied to pastures which would give horse owners the tools to prevent infection by large strongyles.
+                        </p>    
+                        </div>
+
+
+                        <!-- DESCRIPTION SMALL WORM 4 -->
+                        <div class="large img-desc-text" id="img-desc-8" style="display: none;">
+                        <h4> Preventing an Infection </h4>
+                        <br>
+                        <br>
+                        <p>
+                            After infestation, the window of opportunity for treatment is comparatively small, as the large strongyle spends most of its life cycle in the blood stream, where the treatment is ineffective. It is therefore important for the farmer to know what levels of infestation are present in the pastures and whether these are safe for their animals to graze on. We aim to develop a tool which allows quantitative measurement of such infestation of pastures, which would decrease the occurrence of infection.
+                        </p>
+                        </div>
+
+                        <div class="pointer"></div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+            <!-- Classes: 'worm-buster', 'wb-#' -->
+            <!-- Worm Buster and step by step   -->
+            <div class="worm-buster card-style">
+                <div class="header">
+                        <h1 class="wb-header-h1"> Creating the Worm Buster </h1>
+                        <h2 class="wb-header-h2"> A step by step guide </h2>
+                </div>
+                
+                
+                
+                <!-- First paragraph -->
+                <div class="opening">
+                    <h6> So, how will we achieve this? </h6>
+                    <p>
+                    How can we use synthetic biology and a genetically designed bacteria to solve both these issues? 
+                    </p><br>
+                    <p>
+                        The first thing is to define the desired characteristics of each worm buster. To face this problem the team need to develop a bacteria which can: 
+                    </p>
+                </div>
+                
+                
+                <!-- Two bacteria side by side -->
+                <div class="wb-bacteria-container">
+                   
+                    <div class="wb-compare-bacteria">
+                    
+                        <!-- First bacteria -->
+                        <div class="wb-bacteria-img" id="bacteria-img1">
+
+                            <h4> Bacteria 1 </h4>
+                            <img src="http://unsplash.it/180/252" alt="Bacteria-1" class="bacteria-img">
+                            <p>
+                                Live in the intestinal tracts of horses and report a quantitative signal of small strongyle in faeces. The small strongyle buster can thereby work as a diagnostic tool and give horse owners the possibility to use individualized dosage of treatment depending on the level of small strongyle infection. 
+                            </p>
+
+                        </div>
+                    
+                    
+                        <!-- Second bacteria -->
+                        <div class="wb-bacteria-img" id="bacteria-img2">
+
+                            <h4> Bacteria 2</h4>
+                            <img src="http://unsplash.it/180/250" alt="Bacteria-2" class="bacteria-img">
+
+                            <p>
+                                Be applied to pasture samples and report the amount of large strongyles in pastures. By detecting large strongyles in pasture the large strongyle buster can help horse owners prevent their horses from getting infected since they can see which fields that are infected or not. 
+                            </p>
+
+                        </div>
+                    
+                    </div>
+                    
+                    <!-- Solution section 1 -->
+                    <div class="wb-section-1">
+                    <h4> Worm culturing </h4>
+                    <img src="http://unsplash.it/80/125" alt="" class="wb-section-1-img">
+                    <p>
+                        The first step in obtaining live nematodes is the recovery of the eggs from the feces. This is done through filtration of the feces and different centrifugation steps with saturated salt water followed by a bleach containing solution to obtain sterile eggs. The eggs are successively stored in LB media for a period between 7 and 10 days to allow them to hatch and reach the third larval stage. After this process the large strongyles are divided from the small strongyles under a microscope and stored for successive use.
+                    </p>
+                    </div>
+                    
+                    
+                    <!-- Solution section 2 -->
+                    <div class="wb-section-2">
+                    <h4> Transcriptomics and Phage Display </h4>
+                    <img src="http://unsplash.it/80/125" alt="" class="wb-section-2-img">
+                    <p>
+                        As not a lot is known about our worms of interest, we need to choose approaches that allow us to detect the worm without knowing its specific markers. We choose two distinct approaches. The first of them, transcriptomic analysis, relies on the co-culturing of nematodes with E.coli for 2 or 3 hours and subsequent sequencing of the bacterial mRNA, which will reveal which genes are upregulated at the presence of the nematode. The promoters of these genes can then be used to develop a biosensor. 
+                    </p><br>
+                    <p>
+                        The second approach utilizes libraries of phages expressing a set of peptides on their surface. By rounds of incubation and washing, only phages specific to the strongyle will be found and sequencing of their genetic information will allow us to construct a peptide that is specific to surface markers of the nematode leading to creation of a biosensor. 
+
+                        
+                    </p>
+                    </div>
+                    
+                    
+                    <!-- Solution section 3 -->
+                    <div class="wb-section-3">
+                    <h4> Reporter system </h4>
+                    <img src="http://unsplash.it/80/125" alt="" class="wb-section-3-img">
+                    <p>
+                        Once we have the results from either the transcriptomics or the phage display, we’ll have to be able to see what we’ve done! We plan on using fluorescent chromoproteins to be able to detect our worms in both grass and in feces. This would allow a relatively simple and quantitative way for ranchers to detect our worms of interest, using a cheap UV lamp and a camera.  
+                    </p>
+                    </div>
+                    
+                    
+                    <!-- Solution section 4 -->
+                    <div class="wb-section-4">
+                    <h4> Complementing Research of Cyathostominae </h4>
+                    <h6> Proteomics </h6>
+                    <img src="http://unsplash.it/80/125" alt="" class="wb-section-4-img">
+                    <p>
+                        A second part will attempt to explore the known concerted action behaviour of the parasites.Seasonal encystation and emergence of larvae occurs in a coordinated fashion. The hypothesis is that the encysted strongyles react to a signaling compound. To find possible candidates for this compound a strategy is employed in which samples of infested host tissue are run through a battery of test, and occurence of compounds is compared to a control of healthy tissue.
+                    </p><br>
+                    <p>
+                        In our project we hope to perform studies to locate and identify this molecule. If we can find it we could further develop diagnostic tools for guidance of treatment of deworming as treatment could be dissuaded at cases where amount of grown worms is low and amount of cysts is high. Deworming drugs have no effect on encysted worms and killing of the relatively few grownups would induce cyst bursting. Detection and describing of the eventual molecule demands different approaches depending on what structure we assume the molecule to have.
+                    </p>
+                    </div>
+            
+            
+                    <!-- Solution section 5 -->
+                    <div class="wb-section-5">
+                    <h4> Modelling </h4>
+                    <h6> Grass Sampling </h6>
+                    <p>
+                        Methods for detecting a strongyle infected field do exist, but is a long and arduous process. Our aim is to build predictable and reliable models, based on real world behaviour to reduce the area needed to sample. These models are based on the location and expected movement of the strongyles, once outside of the horse.
+                    </p><br>
+                    <h6>  Economic Modelling </h6>
+                    <p>
+                        A good model is a great tool to study the simplified behaviour of a real world problem. Often it can be more practical, time- and cost efficient to study the model of the real world system. 
+                    </p>
+                    <p>
+                        In order to truly understand the expected market, cost and reach, we are opting for a predicting market analysis.	
+                    </p>
+                    </div> 
+                    
+                    
+                </div>
+                
+                
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Classes:  -->
+            <!-- global WORMing, explenation, globe HP    -->
+            <div class="global-worming card-style">
+                <div class="header">
+                        <h1 class="gw-header-h1"> Global Worming problem and society </h1>
+                        <h2 class="gw-header-h2"> Integrated Human practice </h2>
+                </div>
+                
+                
+                <!-- first section -->
+                <div>
+                    <p>
+                        As you can see these little worms can cause a lot of harm. While we hope that our practical work will at least will contribute to the solution, all of the problems that come with these worms cannot be solved in a laboratory. Will society accept our solution?
+                    </p><br>
+                    <p>
+                        The strongyles harm the horses but the collateral damage is extensive - sentimental value, resistance against anthelmintics, the effect the drugs has on environment and the noteworthy economics are all involved. These are all aspects that make the issue bigger than it appears at first glance. Understanding what consequences resistance amongst strongyles has on these aspects and how the worm buster project would change the conditions within the field is what the human practice and modelling groups are all about.
+                    </p><br>
+                    <p>
+                        Our approach to these aspects of the project is to perform market analyses, economic modelling and a report about the spreading resistance. Furthermore, our goal is to reach out to the people that are affected the most, such as horse owners, with information and advice regarding resistance since the issue lacks awareness.
+                    </p><br>
+
+
+
+                    <h4>Raising Awareness (light bulb)</h4>
+                    <p>
+                        Even if new diagnostic methods are introduced, solving the resistance issue requires a long term commitment which demands that safety precautions are routinely met. As some of the current deworming drugs have damaging effect on wildlife it is of utter importance to follow guidelines regarding how animals undergoing treatment should be kept.
+                    </p><br>
+                    <p>
+                        While performing the market analysis we are also informing people affected by this issue. This is planned do be done by sending a questionnaire together with a compilation of a background consisting of information about the strongyles, resistance and guidelines for dosages and timing of deworming treatments. By spreading this information we hope to build better understanding on drug usage, which is a key action in order to prevent resistance development.
+                    </p><br>
+                    <p>
+                        As our team is partly international we will try to spread the questionnaire to other countries besides Sweden, in hope of getting results reflecting the extent of the issue of strongyles on a bigger scale.
+                    </p><br>
+                    <p>
+                        Lastly, we have also been in direct contact with platforms such as Ridsport, a popular magazine in the community of horse owners, to spread the information of our project. We also hope to feature on “Vetenskapsradion”, a radio station updating about the news in diverse research fields.
+
+
+
+                    <h4> Resistance in a larger scope (pill bottle) </h4>
+                    </p><br>
+                    <p>
+                        The level of antibiotic resistance is increasing in several parts of the world and this is one of the major problems humankind is facing today. Apart from reducing the abuse of antibiotics and inventing new and functional alternatives, there is no solution to this growing problem. In the future, horses can suffer by parasites following the same path of survival mechanism, development of resistance. This would in worst case make the deworming drug treatments useless. 
+                    </p><br>
+                    <p>
+                        This issue also has the potential to grow even larger by breaking the borders in the long term view and hence reach a larger range of hosts. Shedding light to this area in purpose of increasing the awareness would result in horse owners and hopefully the equine industry in general being more controlling of the deworming treatment.
+                    </p><br>
+                    <p>
+
+
+
+                    <h4>Financial perspective (dollar sign)</h4>
+                    </p><br>
+                    <p>
+                        The equine industry includes many areas like stud farms, breeding, slaughter, trading, training  and sports stables, and riding schools [19]. In Sweden the equine industry has a turnover of 450-500 million EUR and horses graze around in fields that in total correspond to 600,000 football fields. [18]. There are approximately 350 000 horses is Sweden (2016) which gives Sweden a larger horse/person ratio than many other European countries [19, 20]. 
+                    </p><br>
+                    <p>
+                        A survey from 2009 where most of the participants were in the field of training, breeding and food production, showed that the estimated cost for a horse used for sports below elite level in Sweden is around 6-10 000 EUR while the monthly cost is estimated to 250-400 EUR.  In Europe the mean cost for a horse in the same genre is 6 625 EUR and the mean monthly cost is 374 EUR [21]. According to “The Horse” (an american magazine about equine health) the minimal monthly cost is 179 - 257 EUR (2500 - 3600 USD per year) [22]. The amount above is not an estimation for horses used at elite level, hence can only be used to get an absolute minimum value of how much money that is spent.
+                    </p><br>
+                    <p>
+                        If the resistance issue becomes widespread and effective deworming treatments cease to exist, the death ratios among horses will increase. Since this scenario is highly likely, the market interest in diagnosis and treatment systems is expected to increase. The economic loss expected by horse breeders in case of uncontrolled infections, include the daily expenses since the horse was born, breeding fees and negated profits that could have been achieved thanks to the horse. 
+                    </p><br>
+                    <p>
+                        Even though all the available data points at a high demand for our product, more data is needed  to predict how an eventual new GMO product would be perceived. That is why we are working on market analysis and economics modelling. The result from these decides if the eventual solutions will be possible to implement.
+                    </p> 
+                </div>    
+            </div>
+            
+            
+            
+            <!-- Classes: 'outreach', 'or-#' -->
+            <!-- global WORMing, explenation, globe HP and COLABS    -->
+            <div class="outreach card-style">
+                <div class="header">
+                        <h1 class="or-header-h1"> Uppsala 2018 - Our planned outreach </h1>
+                        <h2 class="or-header-h2"> For the future of iGEM </h2>
+                </div>
+            
+            
+            
+                <div class="opening">
+                    <p>   
+                        In order to promote iGEM and synthetic biology among the public, we are working with several mini-projects such as preparing lectures, writing a booklet and organizing a panel debate. By working with different approaches we hope to raise the general awareness of synthetic biology as a research and occupational field. We try to draw attention to the challenges and possibilities that come with the profession within the field, as our goal is to inspire new generations of synthetic-biology enthusiasts. 
+                    </p><br>
+                </div>
+
+
+
+                <!-- A container for all section regarding the outreach -->
+                <div class="or-container">
+                
+                
+                    <div class="or-media"> 
+                            <h4> Media Outreach </h4>
+                                <p>
+                                    We think this project has great potential not only in the field of veterinary diagnostics, but also in the promotion of synthetic biology overall. Therefore we want to reach out to as many individuals as possible. There is also the potential of inspiring people outside or within the field to give the iGEM competition more consideration. This can be achieved by being active on our Facebook, Instagram, Twitter and Youtube accounts. The content we are uploading will be both educational and informative. Another approach has been to reach out to the local university newspaper “Techna”, that has published an article about our project and also about what iGEM is. We are also striving to get a chance to speak at this year's TedX Uppsala event.
+                                </p><br>
+                        </div>
+                    <div class="or-education">
+                                <h4> Educational Outreach </h4>
+                                <p>
+                                    Another potential collaboration is to reach out to schools and provide an educational lecture about synthetic biology to elementary school, high school and university students. Our idea is to adapt the content of the lecture, to make it useful and interesting for a wider audience. By reaching out to schools, we hope to inspire interest in students for sciences and specifically in the synthetic biology field, and hopefully inspire them to later join the Uppsala iGEM Team. We are also planning on attending events organized by other parties. For example, we will attend the annual conference at Uppsala University - Student Conference in Science and Technology 2018. 
+                                </p><br>
+                        </div>
+                    <div class="or-discussion">
+                                <h4> Public Discussion </h4>
+                                <p>
+                                    Together with the Stockholm iGEM team, we are arranging a panel debate in which speakers and experts from the respective topic are invited to inform and debate. The purpose of the public discussion is to have an informative session about common challenges within the biotechnology field as well as creating an environment for an open discussion. To address a larger audience, we plan on inviting TV companies, such as SVT and TV4, to be able to broadcast the discussion on television. We also plan to invite other student driven organisations to the debate. 
+                                </p><br>
+                        </div>
+                    <div class="or-booklet">
+                                <h4> Booklet </h4>
+                                <p>
+                                    To highlight the everyday challenges people within the synthetic biology field face every day, we are addressing an issue that has grown extensively in society. We have decided to shed light on the issue of burning out. The aim is to create a booklet with simple practical exercises as well as information about the issue. Seen through the lenses of iGEM, it will have some focus on the kind of stress that correlates with working on projects, teamwork and research ethics. Nonetheless, we hope that as many people as possible would find some constructive advice for dealing with exhaustion and how to prevent it. In conclusion, this will become helpful not only for the future iGEM Uppsala teams, but also for other teams worldwide.
+                                </p><br>
+
+                
+                </div>
+                
+                </div>
+                
+                
+                
+                <div class="collaborations">
+                
+                    <h4> Collaborations </h4>
+                    <p>
+                        We are stronger together so when possible we are striving for collaboration with other iGEM teams. So far we are in contact with the teams of Aalto Helsinki, National University of Singapore (NUS), Lund Technical University (LTU), the team of Kungliga Tekniska Högskolan (KTH) and with all other nordic teams at social events and channels. Besides collaboration with teams we also keep a close collaboration with Vidilab, a veterinary diagnostic company. 
+                    </p><br>
+                    
+                    <p>
+                        <a href="https://www.vidilab.se/"> 
+                            <strong> Vidilab </strong> 
+                        </a><br>
+                        Besides collaborating with other teams, iGEM Uppsala 2018 has a very close collaboration with Vidilab, a company that works with the current veterinary diagnostic tools. They are offering us usage of parts of their lab and equipment during the summer and potentially during the fall. With Vidilab’s help we have also had the opportunity to collect tissue samples and feces samples for our research.
+                    </p><br>
+                    
+                    <p>
+                        <a href="http://2018.igem.org/Team:Stockholm"> 
+                            <strong> iGEM Stockholm </strong> 
+                        </a><br>
+                        Previous years iGEM Uppsala has had a close collaboration with iGEM Stockholm (from KTH), something that is very advantageous to sustain due to the similarities between the teams, not to mention the geographical distance. This year we have two social events planned with the teams, one in Uppsala and one in Stockholm. In addition we have the panel discussion which has been previously mentioned. This year we hope to get the team of Lund Technical University involved as well.  
+                    </p><br>
+                    
+                    <p>
+                        <a href="http://2018.igem.org/Team:Aalto-Helsinki"> 
+                            <strong> Aalto Hensinki </strong> 
+                        </a><br>
+                        New for this year is the WIKI and graphical design collaboration with Aalto Helsinki, where a common SLACK channel has been set up for close communication between the members responsible for the WIKI and graphical design in respective team.
+                    </p><br>
+                    
+                    <p>
+                        <strong> Nordic iGEM Collaboration </strong><br>              
+                        iGEM Uppsala 2018, also participates in a common SLACK workspace for the project manager of each Nordic team, something that has been proven to be very useful in the sense of advice and support from people in the same position. Besides an easy way for direct communication, this year iGEM Uppsala has participated both in the Biobrick Tutorial Weekend arranged by the Technical University of Denmark and the Nordic iGEM Conference in Lund. Both events have been very useful and fun, socially and practically. In summary, both events proved to be wonderful opportunities to connect with other nordic teams.
+                    </p><br>
+                    <p>
+
+
+                        Another collaboration that we are planning on with other iGEM contacts is a webinar later this summer. This would give us the chance to train in presenting our projects as well as share our experiences from working on iGEM. The general public would have access to the webinar as well.
+                    </p><br>
+                
+                </div>   
+            </div>
+
+          
+          
+            
+            <div class="sponsors card-style">
+                <div class="header">
+                        <h1 class="spons-header-h1"> Sponsors </h1>
+                </div>
+                
+                <div>
+                    <h4>
+                        <strong> Check with project!!!!! <br></strong>
+                        We would like to extend our greatest gratetude to our kind sponsors:
+                    </h4>
+                    <br>
+                    <br>
+                    
+                    
+                    <div class="vidilab">
+                    <a href="https://www.vidilab.se/"> <img src="vidilab_logo.png" width="200px;"> </a>
+                    </div>  
+                    
+                    
+                    <div class="lindvalls">
+                    <a href="https://www.lindvallskaffe.se/"> <img src="lindvalls_logo.png" width="200px" height="180px"> </a>
+                    </div>
+                    
+                    <div class="kanbanchi" style="background: rgba(55, 55, 55, 0.7); width: 200px;">        
+                    <a href="https://www.kanbanchi.com/"> <img src="kanban.svg" width="200px" height="60px"> </a>
+                    </div>
+                    
+                    
+                    <div class="e-lab" style="background: var(--e-lab_color); width: 200px;" >
+                    <a href="https://www.elabjournal.com"> <img src="https://www.elabjournal.com/wp-content/themes/elab/img/logo-elabjournal-white.svg" width="180px" height="60px"> </a>
+                    </div>
+                    
+                    
+                    <div class="nanopore" style="background: var(--oxford_color); width: 195px; height: 50px; padding-top: 10px; padding-left: 5px;">
+                    <a href="https://nanoporetech.com/"> <img src="oxford_logo.svg" width="180px;"></a>
+                    </div>
+                    
+                     
+
+
+                 </div>
+            </div>
+            
+            
+            
+            
+            <div class="acknowledgements card-style">
+                <div class="header">
+                    <h1> Acknowledgements </h1>
+                </div>
+            
+                <div style="width: 80%;">
+                <p>        
+                    <strong> Without the help and knowledge of these people our project would simply not be possible, we would like to thank: </strong> 
+                </p><br><br>
+
+                <p>
+                    Anthony Forster, Professor at Department of Cell and Molecular Biology, Uppsala University
+                </p><br>
+                <p>
+                    Alice Anlind, Research Engineer, Vidilab, former iGEM participant
+                </p><br>
+                <p>
+                    Magdalena Haupt, Communications and Parasite expert at Vidilab
+                </p><br>
+                <p>
+                    Sara Ljungström, Research and Development, Vidilab
+               </p><br>
+                <p>
+                   Margareta Kabbe, Course administrator iGEM, senior lecturer at Biology Education Centre,    Uppsala University
+                </p><br>
+                <p>
+                    Maria Wilen, Consult at Biology Education Centre, Uppsala Universitet 
+                </p>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="references card-style">
+                <div class="header">
+                    <h1> References </h1>
+                </div>
+                
+                <div style="width: 80%;">
+                
+
+                    <p id="ref-01"> 
+                    [1] Karlsson J. Parasite detection in extensively hold Gotland ponies. 50 
+                        <span style="float: right;"> 
+                            <a href="https://stud.epsilon.slu.se/7939/7/karlsson_j_150622.pdf"> Link: </a> 
+                        </span>
+</p><br>
+
+                    <p id="ref-02"> 
+                    [2] Molena RA, Peachey LE, Di Cesare A, Traversa D, Cantacessi C. 2018. Cyathostomine egg reappearance period following ivermectin treatment in a cohort of UK Thoroughbreds. Parasites and Vectors 11: 61.    
+                        <span style="float: right;"> 
+                            <a href="https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-018-2638-6"> Link: </a> 
+                        </span>
+</p><br>
+
+                    <p id="ref-04"> 
+                    [4] Andersson E. Hur påverkas prevalensen av selektiv avmaskning? 22.
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a> 
+                        </span>
+</p><br>
+
+                    <p id="ref-05"> 
+                    [5] Traversa D, von Samson-Himmelstjerna G, Demeler J, Milillo P, Schürmann S, Barnes H, Otranto D, Perrucci S, di Regalbono AF, Beraldo P, Boeckh A, Cobb R. 2009. Anthelmintic resistance in cyathostomin populations from horse yards in Italy, United Kingdom and Germany. Parasites and Vectors 2: S2 
+                        <span style="float: right;"> 
+                            <a href="https://parasitesandvectors.biomedcentral.com/articles/10.1186/1756-3305-2-S2-S2"> Link: </a> 
+                        </span>
+</p><br>
+
+                    <p id="ref-06"> 
+                    [6] Matthews JB, Hodgkinson JE, Dowdall SMJ, Proudman CJ. 2004. Recent developments in research into the Cyathostominae and Anoplocephala perfoliata. Veterinary Research 35: 371–381. 
+                        <span style="float: right;"> 
+                            <a href="https://www.ncbi.nlm.nih.gov/pubmed/15236671"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-07"> 
+                    [7] Jasovský D, Littmann J, Zorzet A, Cars O. 2016. Antimicrobial resistance—a threat to the world’s sustainable development. Upsala Journal of Medical Sciences 121: 159–164.
+                        <span style="float: right;"> 
+                            <a href="https://stud.epsilon.slu.se/7939/7/karlsson_j_150622.pdf"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-08"> 
+                    [8] K. Nielsen M, Andersson U, K. Howe D. 2015. Diagnosis of Strongylus Vulgaris. University of Kentucky
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-09"> 
+                    [9] C. Sellon D, T. Long M. Equine Infectious Diseases. Elsevier Health Sciences, 2007
+                        <span style="float: right;"> 
+                            <a href="https://books.google.se/books?id=sZku4lppRfsC&pg=PA483&lpg=PA483&dq=Cyathostominae+horse&source=bl&ots=GtJJjXA5Kd&sig=9ktoAaiQnVSd6xTC_hhnvujvUBE&hl=sv&sa=X#v=onepage&q=Cyathostominae%20horse&f=false"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-10"> 
+                    [10] Colen MA, D. C. K van D, F. N. J. K. Anthelmintic resistance in Cyathostominae. 
+                        <span style="float: right;"> 
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=20&ved=0ahUKEwj-xuHwxuDbAhXGFZoKHUsSBmM4ChAWCGQwCQ&url=https%3A%2F%2Fdspace.library.uu.nl%2Fbitstream%2Fhandle%2F1874%2F289404%2FOnderzoeksstage%2520anthelmintic%2520resistance%2520in%2520Cyathostominae%2520MAColen.doc%3Fsequence%3D2%26isAllowed%3Dy&usg=AOvVaw2PhKtv4XqGJTqJg86aFIFd"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-11">
+                    [11] Johnstone DC. 2000. S. vulgaris pathogenesis. WWW-dokument 2000-: Retrived 2018-06-20.
+                        <span style="float: right;"> 
+                            <a href="http://cal.vet.upenn.edu/projects/merial/Strongls/strong_8d.html"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-12">
+                    [12] Ling J. 2017. Strongylus vulgaris och Anoplocephela perfoliata. WWW-dokument 2017-07-14 
+                        <span style="float: right;"> 
+                            <a href="https://stud.epsilon.slu.se/10486/.Retrived 2018-06-20"> Link: </a>  
+                        </span>
+                    </p><br>
+
+                    <p id="ref-13">
+                    [13] Bracken MK, Wøhlk CBM, Petersen SL, Nielsen MK. 2012. Evaluation of conventional PCR for detection of Strongylus vulgaris on horse farms. Veterinary Parasitology 184: 387–391. 
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-14">
+                    [14] 2013. New Method for Detecting Bloodworms. WWW-dokument 2013-07-27
+                        <span style="float: right;"> 
+                            <a href="https://thehorse.com/116401/new-method-for-detecting-bloodworms/.Retrived 2018-06-21"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-15">
+                    [15] Cobb R, Boeckh A. 2009. Moxidectin: a review of chemistry, pharmacokinetics and use in horses. Parasites and Vectors 2: S5.
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a>  
+                        </span>
+                    </p><br>
+
+                    <p id="ref-16">
+                    [16] Corning S. 2009. Equine cyathostomins: a review of biology, clinical significance and therapy. Parasites and Vectors 2: S1.
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-17">
+                    [17] Nielsen MK, Scare J, Gravatte HS, Bellaw JL, Prado JC, Reinemeyer CR. 2015. Changes in Serum Strongylus Vulgaris-Specific Antibody Concentrations in Response to Anthelmintic Treatment of Experimentally Infected Foals. Frontiers in Veterinary Science, doi 10.3389/fvets.2015.00017
+                        <span style="float: right;"> 
+                            <a href="###"> Link: </a>  
+                        </span>
+                    </p><br>
+
+                    <p id="ref-18">
+                    [18] The Swedish horse sector. WWW-dokument. Retrived 2018-06-23.
+                        <span style="float: right;"> 
+                            <a href="https://hastnaringen.se/swedish-horse-sector/"> Link: </a>  
+                        </span>
+                    </p><br>
+
+                    <p id="ref-19">
+                    [19] Häggblom M, Rantamäki-Lahtinen L, Vihinen H. Equine sector comparison between the Netherlands, Sweden and Finland. 36. 
+                        <span style="float: right;"> 
+                            <a href="http://www.hippolis.fi/UserFiles/hippolis/File/EquineLife/equine_sector_comparison_between_the_netherlands_sweden_and_finland.pdf"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-20">
+                    [20] Hästar och anläggningar med häst 2016 - JO24SM1701 - In English. WWW-dokument.  Retrived 2018-06-24
+                        <span style="float: right;"> 
+                            <a href="http://www.jordbruksverket.se/webdav/files/SJV/Amnesomraden/Statistik,%20fakta/Husdjur/JO24/JO24SM1701/JO24SM1701_inEnglish.html"> Link: </a>  
+                        </span>
+                    </p><br>
+
+                    <p id="ref-21">
+                    [21] Liljenstolpe C. 2009. Horses in Sweden. Swedish University of Agricultural Sciences.
+                        <span style="float: right;"> 
+                            <a href="http://www.wbfsh.org/files/EU%20Equus%202009.pdf"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                    <p id="ref-22">
+                    [22] S. Loving N. 2012. How Much Does a Horse Cost? – The Horse. WWW-dokument 2012-. Retrived 2018-06-24.
+                        <span style="float: right;"> 
+                            <a href="https://thehorse.com/117877/how-much-does-a-horse-cost/"> Link: </a> 
+                        </span>
+                    </p><br>
+
+                   <p id="ref-23">
+                    [23] The Anthelmintic Ingredient Moxidectin Negatively Affects Seed Germination of Three Temperate Grassland Species. WWW-dokument. Retrived 2018-06-25.
+                        <span style="float: right;"> 
+                            <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0166366"> Link: </a>  
+                        </span>
+                    </p><br>
+            
+            </div>
+            
+            
+            
+            
+            
+            
+        </div>
+            
+
+                    
+            
+            <!-- Section: Footer                -->
+            <div class="footer" style="display: none">
+            <p>Our sponsors</p><br>
+            <p>contact</p><br>
+            <p>buy us a coffee</p><br>
+            </div>
+        
+        </div>
+
+</div>
+
+
+<div class="where-on-page">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+
+
+<!-- svg logo of e-LAB -->
+<!--Generator: Xara Designer (www.xara.com), SVG filter version: 4.0.0.1-->
+<!-- 
+
+<svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="155.906pt" height="28.347pt" viewBox="0 0 155.906 28.347">
+ <defs>
+  <marker id="DefaultArrow2" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -9 54 L -9 -54 L 117 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow3" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow4" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -9,0 L -9,-45 C -9,-51.708 2.808,-56.580 9,-54 L 117,-9 C 120.916,-7.369 126.000,-4.242 126,0 C 126,4.242 120.916,7.369 117,9 L 9,54 C 2.808,56.580 -9,51.708 -9,45 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow5" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -54, 0 C -54,29.807 -29.807,54 0,54 C 29.807,54 54,29.807 54,0 C 54,-29.807 29.807,-54 0,-54 C -29.807,-54 -54,-29.807 -54,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow6" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -63,0 L 0,63 L 63,0 L 0,-63 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow7" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M 18,-54 L 108,-54 L 63,0 L 108,54 L 18, 54 L -36,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow8" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M -36,0 L 18,-54 L 54,-54 L 18,-18 L 27,-18 L 63,-54 L 99,-54 L 63,-18 L 72,-18 L 108,-54 L 144,-54 L 90,0 L 144,54 L 108,54 L 72,18 L 63,18 L 99,54 L 63,54 L 27,18 L 18,18 L 54,54 L 18,54 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow9" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <g transform="scale(0.0092592592)">
+    <path d="M 0,45 L -45,0 L 0, -45 L 45, 0 z M 0, 63 L-63, 0 L 0, -63 L 63, 0 z"/>
+   </g>
+  </marker>
+  <filter id="StainedFilter">
+   <feBlend mode="multiply" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="BleachFilter">
+   <feBlend mode="screen" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="InvertTransparencyBitmapFilter">
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncG type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncB type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="linear" slope="-1" intercept="1"/>
+    <feFuncG type="linear" slope="-1" intercept="1"/>
+    <feFuncB type="linear" slope="-1" intercept="1"/>
+    <feFuncA type="linear" slope="1" intercept="0"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncG type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncB type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+   </feComponentTransfer>
+  </filter>
+  <image id="Bitmap" width="0.001" height="0.001" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QA3RXhpZgAASUkqAAgAAAABADEBAgAVAAAAGgAAAAAAAABYYXJhIERlc2lnbmVyIFBybyBYOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAAuANgBAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APf6KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK//Z">
+   <title>Bitmap</title>
+  </image>
+  <pattern id="BitmapFill" patternUnits="userSpaceOnUse" width="1000" height="1000" patternTransform="translate(0.819 27.819) scale(1 -1)">
+   <use xlink:href="#Bitmap" transform="scale(162000 34500)" filter="url(#InvertTransparencyBitmapFilter)"/>
+  </pattern>
+ </defs>
+ <g id="Document" fill="none" stroke="black" font-family="Times New Roman" font-size="16" transform="scale(1 -1)">
+  <g id="Spread" transform="translate(0 -28.347)">
+   <g id="Page background">
+    <g id="Group" stroke="none">
+     <mask id="TranspMask">
+      <rect x="-10%" y="-10%" width="120%" height="120%" fill="url(#BitmapFill)" stroke="none"/>
+     </mask>
+     <path d="M 0.819,27.819 L 162.819,27.819 L 162.819,-6.681 L 0.819,-6.681 L 0.819,27.819 Z" fill="#000000" marker-start="none" marker-end="none" mask="url(#TranspMask)"/>
+     <path d="M 0.001,28.346 L 0.001,-0.001 L 155.904,-0.001 L 155.904,28.346 L 0.001,28.346 Z" stroke-linejoin="bevel" stroke-width="0" fill="none" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    </g>
+   </g>
+   <g id="Layer 1">
+    <g id="ClipView" fill-rule="nonzero" stroke="none">
+     <path d="M 4.269,27.922 L 166.325,27.922 L 166.325,0.943 L 4.269,0.943 L 4.269,27.922 Z" marker-start="none" marker-end="none"/>
+     <clipPath id="ClipPath">
+      <path d="M 4.269,0.943 L 4.269,27.922 L 166.325,27.922 L 166.325,0.943 L 4.269,0.943 Z"/>
+     </clipPath>
+     <g clip-path="url(#ClipPath)">
+      <path d="M 37.172,6.849 C 37.172,6.849 37.078,6.473 37.008,6.262 L 36.544,4.947 L 37.801,4.947 L 37.343,6.262 C 37.272,6.473 37.184,6.849 37.184,6.849 L 37.172,6.849 Z M 37.953,4.465 L 36.392,4.465 L 35.98,3.274 L 35.383,3.274 L 36.873,7.418 L 37.484,7.418 L 38.974,3.274 L 38.369,3.274 L 37.953,4.465 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 42.665,3.778 C 43.111,3.778 43.376,4.06 43.376,4.483 C 43.376,4.906 43.094,5.193 42.659,5.193 L 41.732,5.193 L 41.732,3.778 L 42.665,3.778 Z M 42.601,5.675 C 42.977,5.675 43.211,5.938 43.211,6.303 C 43.211,6.667 42.989,6.914 42.59,6.914 L 41.732,6.914 L 41.732,5.675 L 42.601,5.675 Z M 41.15,7.418 L 42.601,7.418 C 43.299,7.418 43.804,7.03 43.804,6.362 C 43.804,5.956 43.604,5.633 43.288,5.469 L 43.288,5.457 C 43.722,5.329 43.968,4.917 43.968,4.453 C 43.968,3.673 43.364,3.273 42.637,3.273 L 41.15,3.273 L 41.15,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 44.901,7.418 L 44.901,3.273 L 45.482,3.273 L 45.482,7.418 L 44.901,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 48.488,3.737 C 49.333,3.737 50.015,4.441 50.015,5.374 C 50.015,6.279 49.333,6.961 48.488,6.961 C 47.642,6.961 46.956,6.279 46.956,5.374 C 46.956,4.441 47.642,3.737 48.488,3.737 Z M 48.488,7.489 C 49.685,7.489 50.613,6.567 50.613,5.374 C 50.613,4.154 49.685,3.203 48.488,3.203 C 47.29,3.203 46.357,4.154 46.357,5.374 C 46.357,6.567 47.29,7.489 48.488,7.489 L 48.488,7.489 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 51.563,5.568 L 51.563,5.064 L 53.277,5.064 L 53.277,5.568 L 51.563,5.568 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 54.427,7.418 L 54.427,3.273 L 55.007,3.273 L 55.007,7.418 L 54.427,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 57.051,6.914 L 55.63,6.914 L 55.63,7.418 L 59.053,7.418 L 59.053,6.914 L 57.632,6.914 L 57.632,3.273 L 57.051,3.273 L 57.051,6.914 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 59.675,7.418 L 62.08,7.418 L 62.08,6.914 L 60.255,6.914 L 60.255,5.616 L 61.74,5.616 L 61.74,5.111 L 60.255,5.111 L 60.255,3.778 L 62.181,3.778 L 62.181,3.273 L 59.675,3.273 L 59.675,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 64.863,7.489 C 65.861,7.489 66.372,6.943 66.372,6.943 L 66.084,6.508 C 66.084,6.508 65.602,6.961 64.887,6.961 C 63.959,6.961 63.354,6.256 63.354,5.374 C 63.354,4.488 63.971,3.737 64.892,3.737 C 65.673,3.737 66.172,4.277 66.172,4.277 L 66.483,3.86 C 66.483,3.86 65.914,3.203 64.875,3.203 C 63.63,3.203 62.756,4.154 62.756,5.369 C 62.756,6.573 63.66,7.489 64.863,7.489 L 64.863,7.489 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 67.303,7.418 L 67.885,7.418 L 67.885,5.599 L 70.034,5.599 L 70.034,7.418 L 70.615,7.418 L 70.615,3.273 L 70.034,3.273 L 70.034,5.093 L 67.885,5.093 L 67.885,3.273 L 67.303,3.273 L 67.303,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 76.266,5.31 C 76.766,5.31 77.071,5.622 77.071,6.121 C 77.071,6.62 76.766,6.914 76.272,6.914 L 75.427,6.914 L 75.427,5.31 L 76.266,5.31 Z M 74.846,7.418 L 76.36,7.418 C 77.118,7.418 77.663,6.908 77.663,6.121 C 77.663,5.334 77.118,4.806 76.36,4.806 L 75.427,4.806 L 75.427,3.274 L 74.846,3.274 L 74.846,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 79.853,5.428 C 80.305,5.428 80.587,5.715 80.587,6.179 C 80.587,6.485 80.468,6.702 80.257,6.819 C 80.146,6.878 80.01,6.914 79.688,6.914 L 79.019,6.914 L 79.019,5.428 L 79.853,5.428 Z M 78.438,7.418 L 79.705,7.418 C 80.14,7.418 80.322,7.383 80.48,7.324 C 80.903,7.166 81.179,6.749 81.179,6.203 C 81.179,5.675 80.886,5.228 80.433,5.082 L 80.433,5.07 C 80.433,5.07 80.48,5.017 80.557,4.882 L 81.438,3.273 L 80.78,3.273 L 79.904,4.923 L 79.019,4.923 L 79.019,3.273 L 78.438,3.273 L 78.438,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 84.079,3.737 C 84.924,3.737 85.604,4.441 85.604,5.374 C 85.604,6.279 84.924,6.961 84.079,6.961 C 83.233,6.961 82.546,6.279 82.546,5.374 C 82.546,4.441 83.233,3.737 84.079,3.737 Z M 84.079,7.489 C 85.276,7.489 86.204,6.567 86.204,5.374 C 86.204,4.154 85.276,3.203 84.079,3.203 C 82.881,3.203 81.947,4.154 81.947,5.374 C 81.947,6.567 82.881,7.489 84.079,7.489 L 84.079,7.489 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 88.41,3.778 C 89.343,3.778 89.953,4.33 89.953,5.352 C 89.953,6.367 89.337,6.914 88.41,6.914 L 87.658,6.914 L 87.658,3.778 L 88.41,3.778 Z M 87.077,7.418 L 88.451,7.418 C 89.718,7.418 90.552,6.661 90.552,5.352 C 90.552,4.037 89.718,3.273 88.451,3.273 L 87.077,3.273 L 87.077,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 91.391,7.418 L 91.972,7.418 L 91.972,4.741 C 91.972,4.108 92.383,3.737 93.017,3.737 C 93.656,3.737 94.073,4.108 94.073,4.753 L 94.073,7.418 L 94.655,7.418 L 94.655,4.741 C 94.655,3.819 93.992,3.203 93.023,3.203 C 92.055,3.203 91.391,3.819 91.391,4.741 L 91.391,7.418 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 97.577,7.489 C 98.576,7.489 99.086,6.943 99.086,6.943 L 98.798,6.508 C 98.798,6.508 98.317,6.961 97.601,6.961 C 96.673,6.961 96.069,6.256 96.069,5.374 C 96.069,4.488 96.685,3.737 97.607,3.737 C 98.387,3.737 98.887,4.277 98.887,4.277 L 99.198,3.86 C 99.198,3.86 98.629,3.203 97.589,3.203 C 96.345,3.203 95.47,4.154 95.47,5.369 C 95.47,6.573 96.373,7.489 97.577,7.489 L 97.577,7.489 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 100.905,6.914 L 99.485,6.914 L 99.485,7.418 L 102.907,7.418 L 102.907,6.914 L 101.486,6.914 L 101.486,3.273 L 100.905,3.273 L 100.905,6.914 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 39.319,14.785 C 39.319,15.423 38.878,15.997 38.206,15.997 C 37.387,15.997 36.994,15.407 36.847,14.785 L 39.319,14.785 Z M 38.271,18.125 C 40.761,18.125 42.169,16.389 42.169,14.047 C 42.169,13.769 42.103,13.164 42.103,13.164 L 36.781,13.164 C 36.994,12.131 37.846,11.656 38.747,11.656 C 39.958,11.656 41.071,12.509 41.071,12.509 L 42.12,10.526 C 42.12,10.526 40.761,9.299 38.517,9.299 C 35.504,9.299 33.883,11.476 33.883,13.72 C 33.883,16.192 35.553,18.125 38.271,18.125 L 38.271,18.125 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 44.117,21.203 L 46.983,21.203 L 46.983,11.951 L 50.498,11.951 L 49.865,9.496 L 44.117,9.496 L 44.117,21.203 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 56.971,18.533 C 56.971,18.533 56.709,17.256 56.497,16.52 L 55.825,14.244 L 58.134,14.244 L 57.479,16.52 C 57.266,17.256 57.004,18.533 57.004,18.533 L 56.971,18.533 Z M 58.805,11.951 L 55.153,11.951 L 54.45,9.496 L 51.502,9.496 L 55.481,21.203 L 58.494,21.203 L 62.474,9.496 L 59.526,9.496 L 58.805,11.951 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 68.45,11.951 C 69.285,11.951 69.694,12.524 69.694,13.179 C 69.694,13.835 69.301,14.375 68.465,14.375 L 66.73,14.375 L 66.73,11.951 L 68.45,11.951 Z M 68.204,16.667 C 68.924,16.667 69.236,17.192 69.236,17.748 C 69.236,18.289 68.924,18.747 68.155,18.747 L 66.73,18.747 L 66.73,16.667 L 68.204,16.667 Z M 63.864,21.203 L 68.171,21.203 C 70.513,21.203 72.15,20.156 72.15,18.141 C 72.15,17.159 71.675,16.16 70.791,15.653 L 70.791,15.619 C 72.133,15.21 72.624,14.014 72.624,12.984 C 72.624,10.429 70.495,9.496 68.171,9.496 L 63.864,9.496 L 63.864,21.203 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 73.712,13.208 L 75.322,13.208 L 75.322,12.715 C 75.322,11.138 76.242,10.596 77.162,10.596 C 78.065,10.596 78.968,11.123 78.968,12.65 L 78.968,19.482 L 76.045,19.482 L 76.045,20.894 L 80.594,20.894 L 80.594,12.632 C 80.594,10.12 78.837,9.103 77.146,9.103 C 75.453,9.103 73.712,10.137 73.712,12.632 L 73.712,13.208 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 88.872,10.596 C 91.237,10.596 93.143,12.568 93.143,15.179 C 93.143,17.709 91.237,19.613 88.872,19.613 C 86.507,19.613 84.585,17.709 84.585,15.179 C 84.585,12.568 86.507,10.596 88.872,10.596 Z M 88.872,21.092 C 92.222,21.092 94.818,18.513 94.818,15.179 C 94.818,11.763 92.222,9.103 88.872,9.103 C 85.522,9.103 82.91,11.763 82.91,15.179 C 82.91,18.513 85.522,21.092 88.872,21.092 L 88.872,21.092 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 97.1,20.894 L 98.726,20.894 L 98.726,13.404 C 98.726,11.631 99.876,10.596 101.649,10.596 C 103.44,10.596 104.606,11.631 104.606,13.437 L 104.606,20.894 L 106.231,20.894 L 106.231,13.404 C 106.231,10.826 104.375,9.103 101.666,9.103 C 98.956,9.103 97.1,10.826 97.1,13.404 L 97.1,20.894 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 113.261,15.327 C 114.525,15.327 115.314,16.132 115.314,17.429 C 115.314,18.283 114.985,18.891 114.394,19.219 C 114.082,19.384 113.704,19.482 112.801,19.482 L 110.928,19.482 L 110.928,15.327 L 113.261,15.327 Z M 109.303,20.894 L 112.85,20.894 C 114.065,20.894 114.575,20.797 115.018,20.632 C 116.201,20.189 116.973,19.022 116.973,17.495 C 116.973,16.016 116.152,14.768 114.886,14.357 L 114.886,14.325 C 114.886,14.325 115.018,14.177 115.232,13.799 L 117.695,9.299 L 115.856,9.299 L 113.408,13.914 L 110.928,13.914 L 110.928,9.299 L 109.303,9.299 L 109.303,20.894 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 119.911,20.894 L 121.522,20.894 L 126.679,13.355 C 127.106,12.732 127.649,11.68 127.649,11.68 L 127.68,11.68 C 127.68,11.68 127.566,12.715 127.566,13.355 L 127.566,20.894 L 129.192,20.894 L 129.192,9.299 L 127.599,9.299 L 122.425,16.821 C 121.998,17.462 121.456,18.513 121.456,18.513 L 121.423,18.513 C 121.423,18.513 121.538,17.478 121.538,16.821 L 121.538,9.299 L 119.911,9.299 L 119.911,20.894 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 135.99,19.302 C 135.99,19.302 135.728,18.251 135.53,17.659 L 134.233,13.98 L 137.748,13.98 L 136.467,17.659 C 136.269,18.251 136.023,19.302 136.023,19.302 L 135.99,19.302 Z M 138.175,12.632 L 133.805,12.632 L 132.656,9.299 L 130.981,9.299 L 135.153,20.894 L 136.861,20.894 L 141.034,9.299 L 139.34,9.299 L 138.175,12.632 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 142.821,20.894 L 144.448,20.894 L 144.448,10.711 L 149.639,10.711 L 149.639,9.299 L 142.821,9.299 L 142.821,20.894 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+      <path d="M 10.15,14.488 C 10.15,13.143 9.055,12.049 7.711,12.049 C 6.365,12.049 5.272,13.143 5.272,14.488 C 5.272,15.832 6.365,16.927 7.711,16.927 C 9.055,16.927 10.15,15.832 10.15,14.488 Z M 20.165,4.412 C 20.165,3.067 19.071,1.973 17.726,1.973 C 16.382,1.973 15.287,3.067 15.287,4.412 C 15.287,5.757 16.382,6.851 17.726,6.851 C 19.071,6.851 20.165,5.757 20.165,4.412 Z M 15.287,24.504 C 15.287,25.849 16.382,26.943 17.726,26.943 C 19.071,26.943 20.165,25.849 20.165,24.504 C 20.165,23.159 19.071,22.065 17.726,22.065 C 16.382,22.065 15.287,23.159 15.287,24.504 Z M 17.726,9.874 C 15.191,9.874 13.129,11.935 13.129,14.471 C 13.129,17.007 15.191,19.069 17.726,19.069 C 20.262,19.069 22.324,17.007 22.324,14.471 C 22.324,11.935 20.262,9.874 17.726,9.874 Z M 27.742,12.049 C 26.398,12.049 25.303,13.143 25.303,14.488 C 25.303,15.832 26.398,16.927 27.742,16.927 C 29.088,16.927 30.181,15.832 30.181,14.488 C 30.181,13.143 29.088,12.049 27.742,12.049 Z M 27.742,17.931 C 26.041,17.931 24.582,16.669 24.336,14.99 L 23.305,14.99 C 23.197,16.173 22.725,17.267 21.942,18.16 L 24.385,20.603 C 24.654,20.455 24.956,20.377 25.265,20.377 C 26.265,20.377 27.08,21.19 27.08,22.192 C 27.08,23.194 26.265,24.008 25.265,24.008 C 24.262,24.008 23.448,23.194 23.448,22.192 C 23.448,21.884 23.527,21.581 23.675,21.314 L 21.216,18.853 C 20.357,19.541 19.326,19.954 18.228,20.05 L 18.228,21.098 C 19.908,21.344 21.17,22.802 21.17,24.504 C 21.17,26.402 19.625,27.947 17.726,27.947 C 15.828,27.947 14.283,26.402 14.283,24.504 C 14.283,22.802 15.546,21.344 17.225,21.098 L 17.225,20.05 C 16.104,19.951 15.053,19.523 14.183,18.81 L 11.748,21.245 C 11.896,21.513 11.976,21.816 11.976,22.124 C 11.976,23.124 11.161,23.939 10.159,23.939 C 9.159,23.939 8.344,23.124 8.344,22.124 C 8.344,21.122 9.159,20.307 10.159,20.307 C 10.468,20.307 10.77,20.386 11.039,20.535 L 13.466,18.108 C 12.709,17.224 12.254,16.148 12.149,14.99 L 11.117,14.99 C 10.871,16.669 9.412,17.931 7.711,17.931 C 5.812,17.931 4.267,16.386 4.267,14.488 C 4.267,12.59 5.812,11.044 7.711,11.044 C 9.412,11.044 10.871,12.306 11.117,13.986 L 12.146,13.986 C 12.241,12.872 12.661,11.825 13.364,10.955 L 10.969,8.559 C 10.701,8.709 10.398,8.786 10.09,8.786 C 9.09,8.786 8.275,7.972 8.275,6.971 C 8.275,5.97 9.09,5.155 10.09,5.155 C 11.092,5.155 11.908,5.97 11.908,6.971 C 11.908,7.279 11.828,7.581 11.679,7.85 L 14.063,10.233 C 14.957,9.458 16.048,8.996 17.225,8.892 L 17.225,7.818 C 15.546,7.573 14.283,6.114 14.283,4.412 C 14.283,2.513 15.828,0.968 17.726,0.968 C 19.625,0.968 21.17,2.513 21.17,4.412 C 21.17,6.114 19.908,7.573 18.228,7.818 L 18.228,8.892 C 19.393,8.994 20.476,9.449 21.363,10.209 L 23.723,7.85 C 23.575,7.581 23.496,7.279 23.496,6.971 C 23.496,5.97 24.31,5.155 25.311,5.155 C 26.313,5.155 27.127,5.97 27.127,6.971 C 27.127,7.972 26.313,8.786 25.311,8.786 C 25.004,8.786 24.701,8.709 24.433,8.559 L 22.066,10.927 C 22.782,11.803 23.212,12.858 23.308,13.986 L 24.336,13.986 C 24.582,12.306 26.041,11.044 27.742,11.044 C 29.641,11.044 31.186,12.59 31.186,14.488 C 31.186,16.386 29.641,17.931 27.742,17.931 L 27.742,17.931 Z" fill="#ffffff" marker-start="none" marker-end="none"/>
+     </g>
+    </g>
+    <g id="Group_1" font-size="2.655" font-family="Museo Sans 500" stroke-linejoin="round" stroke-linecap="round">
+     <path d="M 149.86,22.755 C 150.67,22.972 151.505,22.491 151.721,21.682 C 151.938,20.872 151.457,20.037 150.648,19.821 C 149.838,19.604 149.003,20.085 148.787,20.894 C 148.57,21.704 149.051,22.539 149.86,22.755 Z" stroke="#ffffff" stroke-width="0.233" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+     <text xml:space="preserve" transform="translate(149.455 20.372) scale(1 -1)" fill="#ffffff" stroke="none" stroke-width="0.066" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">R</tspan></text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg> 
+
+-->
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script>
+$(function() {
+    
+   // Change Color
+   // .cards:nth-child(1) {
+   // background-color: rgba(200, 210, 184, 0.3);
+    //$(".cards").children().css('background-color', '#ffffff').css({ opacity: 0.5 });
+    
+    
+    
+    
+    
+    //---------------------------------------------------------------
+    // Function for showing and hiding element by pressing a button...
+    // In a function, to reduce repeted code!
+    // Ex: does:
+    //              $('#cards1').find('.cards-banner').css('visibility', 'visible');
+    //              $('#cards1').find('.cards-banner').css('visibility', 'visible');
+
+    
+    var query1 = $('div#img-desc-1'); 
+    var query2 = $('div#img-desc-2'); 
+    var query3 = $('div#img-desc-3'); 
+    var query4 = $('div#img-desc-4'); 
+    var query5 = $('div#img-desc-5'); 
+    var query6 = $('div#img-desc-6'); 
+    var query7 = $('div#img-desc-7'); 
+    var query8 = $('div#img-desc-8'); 
+    
+    var isVisQuery1 = query1.is(':visible');
+    var isVisQuery2 = query2.is(':visible');
+    var isVisQuery3 = query3.is(':visible');
+    var isVisQuery4 = query4.is(':visible');
+    var isVisQuery5 = query1.is(':visible');
+    var isVisQuery6 = query2.is(':visible');
+    var isVisQuery7 = query3.is(':visible');
+    var isVisQuery8 = query4.is(':visible');
+    
+      
+    query1.show();
+    query5.show();
+    
+    
+    $('#cards1').click(function(){
+    
+        if (isVisQuery1 === false){
+            query2.hide();
+            query3.hide();
+            query4.hide();    
+            query1.show('fast');
+        }   
+    });
+    
+    $('#cards2').click(function(){
+    
+        if (isVisQuery2 === false){
+            query1.hide();
+            query3.hide();
+            query4.hide();
+            query2.show('fast');            
+        }
+    });
+    
+    $('#cards3').click(function(){
+    
+        if (isVisQuery3 === false){
+            query1.hide();
+            query2.hide();
+            query4.hide();
+            query3.show('fast');            
+        }
+    });
+    
+    $('#cards4').click(function(){
+    
+        if (isVisQuery4 === false){
+            query1.hide();
+            query2.hide();
+            query3.hide();
+            query4.show('fast');
+        }
+    });
+    
+    $('#cards5').click(function(){
+    
+        if (isVisQuery5 === false){
+            query6.hide();
+            query7.hide();
+            query8.hide();
+            query5.show('fast');
+        }   
+    });
+    
+    $('#cards6').click(function(){
+    
+        if (isVisQuery6 === false){
+            query5.hide();
+            query7.hide();
+            query8.hide();
+            query6.show('fast');
+        }   
+    });
+    
+    $('#cards7').click(function(){
+    
+        if (isVisQuery7 === false){
+            query5.hide();
+            query6.hide();
+            query8.hide();
+            query7.show('fast');
+        }   
+    });
+    
+    $('#cards8').click(function(){
+    
+        if (isVisQuery8 === false){
+            query5.hide();
+            query6.hide();
+            query7.hide();
+            query8.show('fast');
+        }   
+    });
+
+    
+    
+
+    
+    
+    
+    
+    //var query = $('div.img-desc-text')
+    
+    
+    
+   /* 
+    // Stores the id of the clicked div inside of the class of ".cards"
+    // Main function when you click
+    $('#cards1').click(function(){
+    
+        if (query1.is(':visible') === false){
+            query1.show('fast');
+            lastVisited(query1);
+            
+        }
+        else{
+            
+        }
+        
+        
+        
+        //var clickedImgID = $(this).attr('id');
+        //imgDisplay.showElem(clickedImgID, 'cards-banner');    
+            
+            //$('#img-desc-4').toggleClass('hidden');
+        //$('div > .img-desc-text').css({opacity: 0});    
+        //$("#img-desc-4").css({opacity: 1});
+
+            
+            
+        //$('#img-desc-1').css('visibility', 'hidden');
+        
+        //$("#img-desc-2").show(300);
+        
+        
+    });
+    
+        $('#cards2').click(function(){
+
+            if (query2.is(':visible') === true){
+                query4.fadeOut();
+                query3.hide(500).css("visibility", "hidden").css("display", "");
+                query1.fadeOut('fast');
+            }
+            else{
+                query2.show('fast');
+            }        
+        });
+        
+        $('#cards3').click(function(){
+
+            if (query3.is(':visible') === true){
+                query2.hide();
+                query1.hide();
+                query4.fadeOut('fast');
+            }
+            else{
+                query3.show('fast');
+            }        
+        });
+        
+        $('#cards4').click(function(){
+
+            if (query4.is(':visible') === true){
+                query2.hide();
+                query1.hide();
+                query3.fadeOut('fast');
+            }
+            else{
+                query4.show('fast');
+            }        
+        });
+        
+        
+       */
+       
+       
+       
+       
+       
+    
+    
+    
+    
+
+    
+    
+
+    //$('.cards').click(function(){
+    //var clickedImg = $(this).attr('class');
+    //alert(clickedImg);
+    //});
+   
+        // if clicked... change .cards_title, color to rgba(45, 100, 65, 1);
+        
+        
+    
+    // Different jQuery selecters
+    
+    // Find 1st child of 'li' and add a border
+    //$('li:first').css('border', '1px solid red');
+    
+    // Swap the image for another
+    // $('img').delay(400).fadeOut(500, function(){ 
+    //    $(this).attr('src', 'img.jpg').fadeIn(500); 
+    // });
+    
+    // Chech class of element
+    //alert($('p:last').hasClass('lead'));
+    
+    // Toggle and remove classes
+    // $('p').toggleClass('blue').removeClass('lead');
+    
+    //
+        
+        // "#" + clickedImg
+        //    $("#" + clickedImg).css('background-color', 'blue');
+        
+
+   
+   /*
+   $('.cards').click( function () {
+       var e = $(this).attr('id');
+       alert(e);
+    });
+    */
+});
+   
+   
+   
+   
+   
+   
+   
+   
+    /*
+    $("div > .cards").on('click', function() {
+        $(this).addClass('visiting');
+        $("div").removeClass('not-visiting');
+
+    })
+    */
+    
+    
+    /*
+
+
+    JQUERY FOR ASIDE
+
+   // Progress bar
+	$(document).ready(function () {
+    $(window).scroll(function () {
+        var s = $(document).scrollTop(),
+            d = $(document).height() - $(window).height();          
+            $("#progressbar").attr('max', d);
+            $("#progressbar").attr('value', s);
+        });
+    });
+  
+    
+   // Add titles from page to footer
+    var h1s = document.getElementsByTagName("h1");
+    for (var i = 1; i < h1s.length; i++) {
+        var h1 = h1s[i];
+        $( "<li><a href=\"#"+ h1.id +"\">" + h1.textContent + "</a></li>" ).appendTo( ".botnav" );
+        console.log(h1);
+    }
+  
+    
+   // Smooth scroll on click
+    $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')) {
+      if (location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top - 50
+              }, 1000);
+              return false;
+            }
+          }
+        }
+      });
+    });
+
+    
+   // Color links based on section
+	var links = $('ul.botnav li a');
+	var h1s = $("h1");
+	var alreadyFound = 0;
+	
+	$(window).scroll(function() {
+	for (var i = links.length-1; i >= 0; i--) {
+		
+		if ($(this).scrollTop() > $(h1s[i+1]).offset().top - 70) {
+		  if (alreadyFound == 0) {
+            console.log('hei');
+            $(links[i]).addClass("active");
+		    alreadyFound = 1;
+          } else {
+            $(links[i]).removeClass("active");
+          }
+		}
+		else {
+		  $(links[i]).removeClass("active");
+		}
+	
+	}
+	alreadyFound = 0;
+	});
+    */
+    
+    
+
+
+
+</script>
+
+
+</body>
+</html>
