@@ -1,0 +1,321 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+    :root{
+        --primary: #8b1a32;
+        --secondary:#969696;
+        --tertiary: #f15025;
+        --whiteish: #fcf7ff;
+        --light-blue:#cde6f5;
+        --alt-secondary: #554640;
+        
+    }
+    
+    
+    html{
+        width: 100%;
+        height: 100%;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.parallax {
+    /* The image used */
+    background-image: url("https://images.unsplash.com/photo-1515163988842-60ece4c9a5bb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7e6b67128f0c03c7bd1ecfbe6f890b1f&w=1000&q=80");
+
+    /* Set a specific height */
+    min-height: 100vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    h1, h2{
+        
+        /*color: #8b1a32;*/
+    }
+    h1{
+        margin-top:2em;
+        margin-bottom: 2em;
+    }
+    .content{
+        background-color: var(--whiteish);
+    }
+    
+    .content-text{
+        min-width: 400px;
+        width:70%;
+        position: relative;
+        margin: auto;
+        /*background-color: #8c7cff;*/
+        
+    }
+    
+    
+    .scroll-pointer{
+        top:85%;
+        position:absolute;
+        /*margin-left:auto;
+        margin-right:auto;*/
+        width: 100%;
+        padding: 0;
+    
+        
+    }
+     .center-icon{
+        width:100px;
+        position: relative;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        opacity: 0.8;
+    }  
+    
+    
+    
+    .inner-card > img{
+        /*height:100%;*/
+        width:100%;
+        object-fit: cover;
+    }
+    
+    .content-card{
+        grid-gap:10px;
+    }
+    
+    .content-card-2{
+        display: grid;
+        /*grid-template-rows: 10em 1fr;*/
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        position: relative;
+        align-items:center;
+        /*justify-content: center;*/
+        background-color: ;
+    }
+    
+    
+     .content-card-3{
+        display: grid;
+        /*grid-template-rows: 10em 1fr;*/
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        position: relative;
+        align-items:center;
+        /*justify-content: center;*/
+        background-color: ;
+    }
+    .card-holder{
+        background-color: var(--light-blue);
+    }
+    
+    .inner-card{
+     height: 100%;
+     /* Or just make sure that the texts are equal length*/
+     display: flex;
+    flex-direction: column;
+    
+     
+          
+     background-color: ;
+     padding: 1vw;
+     border: 1px solid var(--tertiary);
+     border-radius: 8px;
+    }
+    
+    .inner-card-text{
+        flex:1 1 auto;
+    }
+    
+    .content-card-heading{
+     margin: 5px;
+     padding: 1vw;
+     /*grid-row: 1/2;
+     grid-column: 1/3;*/
+     /*background-color: white;*/
+     border: 1px solid var(--light-blue);
+     text-align: center;
+    }
+    
+    .content-card-img{
+        width:100%;
+        /*
+        margin-left: auto;
+        margin-right: auto;
+        */
+        border: 1px solid var(--tertiary);
+    }
+    
+    .left-card{
+    
+     
+    }
+    .right-card{
+   
+   
+    }
+    
+    .collaborations{
+        position:relative;
+        display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+ </style>
+ </head>
+
+
+<body>
+
+
+
+<div class="parallax"></div>
+
+<div class ="scroll-pointer">
+<img class="center-icon" src="downward.png" > 
+</div> 
+    
+<div class= "content" style="font-size:16px;">
+<div class ="content-text" >
+
+    
+<div class="card-holder"> 
+        <h1>Bigass heading</h1>
+        <div class="collaborations">
+            <div><img src="space-cube.png"></div>
+            <div>S 2</div>
+            <div>S 3</div>
+            <div>S 4</div>
+        </div>
+ </div>
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="card-holder"> 
+ <div class="content-card-heading"><h1>Bigass heading</h1></div>
+  <div class="content-card content-card-3">
+    <div class="inner-card left-card">
+    <h2>Random heading</h2>
+    <br>
+   
+     <!-- start slipsum code -->
+     <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+      <img class="content-card-img" src="http://via.placeholder.com/250x150">
+     </div>
+    
+    <div class="inner-card middle-card">
+    <h2>Random heading</h2>
+    <br>
+   
+     <!-- start slipsum code -->
+     <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+     <img class="content-card-img"  src="http://via.placeholder.com/250x150">
+     <!-- end slipsum code -->
+    </div>
+      
+      
+    <div class="inner-card right-card">
+    <h2>Random Heading</h2>
+    <br>
+     <!-- start slipsum code -->
+    <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+    
+   <img class="content-card-img" src="http://via.placeholder.com/250x150">
+    
+    <!-- end slipsum code -->
+    </div>
+ </div>
+</div>
+    
+
+<div class="card-holder">
+ <div class="content-card-heading"><h1>Bigass heading</h1></div>
+  <div class="content-card content-card-2">
+    <div class="inner-card left-card">
+    <h2>Random heading</h2>
+    <br>
+     <!-- start slipsum code -->
+    <div class="inner-card-text">   
+     <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people 
+        </p> </div>
+     <img class="content-card-img" src="http://via.placeholder.com/300x150">
+     <!-- end slipsum code -->
+    </div>
+    <div class="inner-card right-card">
+      <h2>Random Heading </h2>
+    <br>
+     <!-- start slipsum code -->
+    <div class="inner-card-text"> 
+    <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+        </div>
+    <img class=" content-card-img" src="lebuff-300x150.jpg">
+    
+    <!-- end slipsum code -->
+    </div>
+ </div>
+</div>
+
+    
+
+<div class="card-holder">
+ <div class="content-card-heading"><h1>Bigass heading</h1></div>
+  <div class="content-card content-card-2">
+    <div class="inner-card left-card">
+    <h2>Random heading</h2>
+    <br>
+     <!-- start slipsum code -->
+     <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+     <img class="content-card-img" src="lebuff-300x150.jpg">
+     <!-- end slipsum code -->
+    </div>
+    <div class="inner-card right-card">
+      <h2>Random Heading </h2>
+    <br>
+     <!-- start slipsum code -->
+    <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+    
+    <img class="content-card-img" src="lebuff-300x150.jpg">
+    
+    <!-- end slipsum code -->
+    </div>
+ </div>
+</div>
+    
+    
+
+<h1>I'm serious as a heart attack</h1>
+<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
+    
+    
+    
+
+    
+    
+    
+<h1>I can do that</h1>
+<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+    
+    
+    
+    
+
+<h1>No man, I don't eat pork</h1>
+<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
+
+
+    
+    
+   
+</div>
+</div>
+</body>
+</html>
